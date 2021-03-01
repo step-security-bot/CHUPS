@@ -1,6 +1,11 @@
 # Prerequisites
 *.d
 
+# CUSTOM
+CMakeCache.txt
+cmake_install.cmake
+CMakeFiles/*
+
 # Object files
 *.o
 *.ko
