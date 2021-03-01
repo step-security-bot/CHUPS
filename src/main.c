@@ -13,8 +13,10 @@ Date : 01/03/2021
 
 // Bibliothèques locales
 
-#include "../include/textcolor.h"
 #include "../include/common.h"
+#include "../include/host.h"
+#include "../include/textcolor.h"
+
 
 // Codes couleurs
 // Uniquement définis ici car seul main() affichera du contenu à l'écran.

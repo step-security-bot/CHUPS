@@ -35,7 +35,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk"
+					"fragment" : "-g -O0 -Wall -fprofile-arcs -ftest-coverage -g -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk"
 				},
 				{
 					"fragment" : "-std=gnu11"
@@ -65,7 +65,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-g",
+				"fragment" : "-g -O0 -Wall -fprofile-arcs -ftest-coverage -g",
 				"role" : "flags"
 			},
 			{
