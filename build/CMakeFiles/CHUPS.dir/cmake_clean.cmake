@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/CHUPS.dir/src/common.c.o"
+  "CMakeFiles/CHUPS.dir/src/host.c.o"
   "CMakeFiles/CHUPS.dir/src/main.c.o"
   "CMakeFiles/CHUPS.dir/src/textcolor.c.o"
   "bin/CHUPS"

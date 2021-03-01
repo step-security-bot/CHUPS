@@ -9,11 +9,13 @@ set(SRCS
     src/main.c
     src/textcolor.c
     src/common.c
+    src/host.c
     )
 
 set(HEADERS
     include/textcolor.h
     include/common.h
+    include/host.h
     )
 
 

@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/arthur/Desktop/CHUPS/src/common.c" "/Users/arthur/Desktop/CHUPS/build/CMakeFiles/CHUPS.dir/src/common.c.o"
+  "/Users/arthur/Desktop/CHUPS/src/host.c" "/Users/arthur/Desktop/CHUPS/build/CMakeFiles/CHUPS.dir/src/host.c.o"
   "/Users/arthur/Desktop/CHUPS/src/main.c" "/Users/arthur/Desktop/CHUPS/build/CMakeFiles/CHUPS.dir/src/main.c.o"
   "/Users/arthur/Desktop/CHUPS/src/textcolor.c" "/Users/arthur/Desktop/CHUPS/build/CMakeFiles/CHUPS.dir/src/textcolor.c.o"
   )
