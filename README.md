@@ -1,3 +1,5 @@
+![BUILD](https://github.com/unguest/CHUPS/actions/workflows/c-cpp.yml/badge.svg)
+
 # CHUPS
 Check UP Status
 
