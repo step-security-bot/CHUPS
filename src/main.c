@@ -16,7 +16,7 @@ Date : 01/03/2021
 #include "../include/common.h"
 #include "../include/host.h"
 #include "../include/textcolor.h"
-
+#include "../include/synack.h"
 
 // Codes couleurs
 // Uniquement définis ici car seul main() affichera du contenu à l'écran.

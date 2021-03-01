@@ -18,5 +18,10 @@
   "directory": "/Users/arthur/Desktop/CHUPS/build",
   "command": "/usr/bin/clang   -g -O0 -Wall -fprofile-arcs -ftest-coverage -g -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu11 -o CMakeFiles/CHUPS.dir/src/host.c.o -c /Users/arthur/Desktop/CHUPS/src/host.c",
   "file": "/Users/arthur/Desktop/CHUPS/src/host.c"
+},
+{
+  "directory": "/Users/arthur/Desktop/CHUPS/build",
+  "command": "/usr/bin/clang   -g -O0 -Wall -fprofile-arcs -ftest-coverage -g -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu11 -o CMakeFiles/CHUPS.dir/src/synack.c.o -c /Users/arthur/Desktop/CHUPS/src/synack.c",
+  "file": "/Users/arthur/Desktop/CHUPS/src/synack.c"
 }
 ]
