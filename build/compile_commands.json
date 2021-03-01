@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/Users/arthur/Desktop/CHUPS/build",
-  "command": "/usr/bin/clang   -g -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -o CMakeFiles/CHUPS.dir/src/main.c.o -c /Users/arthur/Desktop/CHUPS/src/main.c",
-  "file": "/Users/arthur/Desktop/CHUPS/src/main.c"
-}
-]
