@@ -27,6 +27,9 @@ enum scanType getScanType(Host *host);
 void setPort(Host *host, int port);
 int getPort(Host *host);
 
+void setHostname(Host *host, char *hostname);
+void getHostname(Host *host, char *hostname);
+
 void setState(Host *host, enum State state);
 enum State getState(Host *host);
 

@@ -11,12 +11,14 @@ set(SRCS
     src/textcolor.c
     src/common.c
     src/host.c
+    src/synack.c
     )
 
 set(HEADERS
     include/textcolor.h
     include/common.h
     include/host.h
+    include/synack.h
     )
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)

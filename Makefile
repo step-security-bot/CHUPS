@@ -223,6 +223,33 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CHUPS.dir/build.make CMakeFiles/CHUPS.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/synack.o: src/synack.c.o
+
+.PHONY : src/synack.o
+
+# target to build an object file
+src/synack.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CHUPS.dir/build.make CMakeFiles/CHUPS.dir/src/synack.c.o
+.PHONY : src/synack.c.o
+
+src/synack.i: src/synack.c.i
+
+.PHONY : src/synack.i
+
+# target to preprocess a source file
+src/synack.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CHUPS.dir/build.make CMakeFiles/CHUPS.dir/src/synack.c.i
+.PHONY : src/synack.c.i
+
+src/synack.s: src/synack.c.s
+
+.PHONY : src/synack.s
+
+# target to generate assembly for a file
+src/synack.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CHUPS.dir/build.make CMakeFiles/CHUPS.dir/src/synack.c.s
+.PHONY : src/synack.c.s
+
 src/textcolor.o: src/textcolor.c.o
 
 .PHONY : src/textcolor.o
@@ -268,6 +295,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/synack.o"
+	@echo "... src/synack.i"
+	@echo "... src/synack.s"
 	@echo "... src/textcolor.o"
 	@echo "... src/textcolor.i"
 	@echo "... src/textcolor.s"

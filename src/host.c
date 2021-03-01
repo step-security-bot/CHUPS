@@ -35,6 +35,14 @@ enum scanType getScanType(Host *host) {
     return host->sType;
 }
 
+void setHostname(Host *host, char *hostname) {
+    strncpy(host->hostname, hostname, 256);
+}
+
+void getHostname(Host *host, char *hostname) {
+    strncpy(hostname, host->hostname, 256);
+}
+
 void setPort(Host *host, int port) {
     host->port = port;
 }
