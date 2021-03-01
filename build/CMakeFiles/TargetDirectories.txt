@@ -1,0 +1,3 @@
+/Users/arthur/Desktop/CHUPS/build/CMakeFiles/rebuild_cache.dir
+/Users/arthur/Desktop/CHUPS/build/CMakeFiles/edit_cache.dir
+/Users/arthur/Desktop/CHUPS/build/CMakeFiles/CHUPS.dir
