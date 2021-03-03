@@ -26,6 +26,6 @@ void safeIntInput(int *buf) {
     if(fgets(strBuf, 10, stdin)) {
         sscanf(strBuf, "%d", buf);
     } else {
-        puts("Vous n'avez pas entré un nombre; merci de recommencer.");
+        puts("ERROR while getting an int...");
     }
 }

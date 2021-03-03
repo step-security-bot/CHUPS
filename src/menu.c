@@ -34,13 +34,16 @@ void addHost(void) {
     do
     {
         printf("Which Scan Type do you want to use ? : ");
-        printf("\t0  -  SYN/ACK\n");
-        printf("\t1  -  ICMP\n");
+        printf("\t0  -  ICMP\n");
+        printf("\t1  -  SYN/ACK\n");
         printf("> ");
 
         safeIntInput(&tmpSType);
 
     } while (tmpSType != 0 || tmpSType != 1);
-    
 
+    sType = tmpSType;
+
+    printf("IP Address : ");
+    safeStrInput(hostname, 256);
 }
