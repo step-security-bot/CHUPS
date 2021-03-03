@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "textcolor.h": "c"
+        "textcolor.h": "c",
+        "common.h": "c"
     }
 }

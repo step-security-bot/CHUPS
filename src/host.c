@@ -6,14 +6,14 @@
 
 // "Constructeur"
 
-void initHost(Host *host, char *name, enum scanType stype, char *hostname, int *port) {
+void initHost(Host *host, char *name, enum scanType stype, char *hostname, int port) {
     
     // Utilisation de strncpy pour éviter les buffer overflow (:la_chance:)
     
     strncpy(host->name, name, 128);
     host->sType = stype;
     strncpy(host->hostname, hostname, 256);
-    host->port = *port;
+    host->port = port;
     host->state = OFFLINE;
 }
 

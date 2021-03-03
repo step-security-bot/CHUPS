@@ -8,7 +8,7 @@ Réaliser un programme avec interface CLI capable de dire si un hôte est 'up' (
 
 Deux techniques pour vérifier ceci seront exploitées :
 
-1. Un scan SYN/ACK qui essayera de se connecter à un hôte sur un port spécifié
+1. Un scan utilisant le protocole PCT (Protocole de Contrôle de Transmissions*) qui essayera de se connecter à un hôte sur un port spécifié
 2. Un ping (paquet ICMP) envoyé à l'hôte et le programme se chargera d'analyser la réponse afin de déterminer si l'hôte est disponible sur le réseau.
 
 Chaque type de scan sera codé dans un fichier portant le nom du scan.

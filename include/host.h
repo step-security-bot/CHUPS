@@ -14,7 +14,7 @@ typedef struct Host {
 
 // Prototype du constructeur
 
-void initHost(Host *host, char *name, enum scanType stype, char *hostname, int *port);
+void initHost(Host *host, char *name, enum scanType stype, char *hostname, int port);
 
 // Prototypes des Getters & des Setters
 

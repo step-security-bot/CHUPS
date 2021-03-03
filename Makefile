@@ -223,6 +223,33 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CHUPS.dir/build.make CMakeFiles/CHUPS.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/menu.o: src/menu.c.o
+
+.PHONY : src/menu.o
+
+# target to build an object file
+src/menu.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CHUPS.dir/build.make CMakeFiles/CHUPS.dir/src/menu.c.o
+.PHONY : src/menu.c.o
+
+src/menu.i: src/menu.c.i
+
+.PHONY : src/menu.i
+
+# target to preprocess a source file
+src/menu.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CHUPS.dir/build.make CMakeFiles/CHUPS.dir/src/menu.c.i
+.PHONY : src/menu.c.i
+
+src/menu.s: src/menu.c.s
+
+.PHONY : src/menu.s
+
+# target to generate assembly for a file
+src/menu.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CHUPS.dir/build.make CMakeFiles/CHUPS.dir/src/menu.c.s
+.PHONY : src/menu.c.s
+
 src/synack.o: src/synack.c.o
 
 .PHONY : src/synack.o
@@ -295,6 +322,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/menu.o"
+	@echo "... src/menu.i"
+	@echo "... src/menu.s"
 	@echo "... src/synack.o"
 	@echo "... src/synack.i"
 	@echo "... src/synack.s"

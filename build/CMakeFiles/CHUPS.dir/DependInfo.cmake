@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/arthur/Desktop/CHUPS/src/common.c" "/Users/arthur/Desktop/CHUPS/build/CMakeFiles/CHUPS.dir/src/common.c.o"
   "/Users/arthur/Desktop/CHUPS/src/host.c" "/Users/arthur/Desktop/CHUPS/build/CMakeFiles/CHUPS.dir/src/host.c.o"
   "/Users/arthur/Desktop/CHUPS/src/main.c" "/Users/arthur/Desktop/CHUPS/build/CMakeFiles/CHUPS.dir/src/main.c.o"
+  "/Users/arthur/Desktop/CHUPS/src/menu.c" "/Users/arthur/Desktop/CHUPS/build/CMakeFiles/CHUPS.dir/src/menu.c.o"
   "/Users/arthur/Desktop/CHUPS/src/synack.c" "/Users/arthur/Desktop/CHUPS/build/CMakeFiles/CHUPS.dir/src/synack.c.o"
   "/Users/arthur/Desktop/CHUPS/src/textcolor.c" "/Users/arthur/Desktop/CHUPS/build/CMakeFiles/CHUPS.dir/src/textcolor.c.o"
   )
