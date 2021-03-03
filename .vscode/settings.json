@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "textcolor.h": "c",
-        "common.h": "c"
+        "common.h": "c",
+        "cstring": "c"
     }
 }

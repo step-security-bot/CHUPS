@@ -1,3 +1,9 @@
+/*
+Authors : Tchadel Icard && Arthur Pons
+Name : CHUPS.synackC
+Date : 01/03/2021
+*/
+
 #include <stdio.h>
 #include <sys/types.h>
 #include <unistd.h>
@@ -17,7 +23,7 @@ void isOnline(Host *h) {
     getHostname(h, &hostname);
 
     if(!checkIp(hostname)) {
-        printf("HostnameError : I  P Address %s is not valid. Couldn't verify host's availability.", hostname);
+        printf("HostnameError : IP Address %s is not valid. Couldn't verify host's availability.", hostname);
         setState(h, OFFLINE);
         return;
     } else if (getPort(h) > 65535 || getPort(h) < 1) {

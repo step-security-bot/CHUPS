@@ -1,3 +1,9 @@
+/*
+Authors : Tchadel Icard && Arthur Pons
+Name : CHUPS.hostH
+Date : 01/03/2021
+*/
+
 #ifndef __HOST__H__
 #define __HOST__H__
 

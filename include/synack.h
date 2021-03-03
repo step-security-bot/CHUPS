@@ -1,3 +1,9 @@
+/*
+Authors : Tchadel Icard && Arthur Pons
+Name : CHUPS.synackH
+Date : 01/03/2021
+*/
+
 #ifndef __SYNACK__H
 #define __SYNACK__H
 
