@@ -8,5 +8,6 @@ Date : 01/03/2021
 #define __MENU__H__
 
 void menu(void);
+void addHost(void);
 
 #endif

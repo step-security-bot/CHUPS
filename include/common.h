@@ -10,5 +10,6 @@ Date : 01/03/2021
 void clearScreen();
 void safeStrInput(char *buf, int size);
 void safeIntInput(int *buf);
+void sanityzeString(char *str);
 
 #endif

@@ -29,3 +29,11 @@ void safeIntInput(int *buf) {
         puts("ERROR while getting an int...");
     }
 }
+
+void sanityzeString(char *str) {
+    int i = 0;
+
+    while(str[i++] != '\0') {
+        if(str[i] == '\n') str[i] = '\0';
+    }
+}

@@ -13,6 +13,7 @@ set(SRCS
     src/host.c
     src/synack.c
     src/menu.c
+    src/file.c
     )
 
 set(HEADERS
@@ -21,6 +22,7 @@ set(HEADERS
     include/host.h
     include/synack.h
     include/menu.h
+    include/file.h
     )
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)

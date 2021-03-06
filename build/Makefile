@@ -169,6 +169,33 @@ src/common.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CHUPS.dir/build.make CMakeFiles/CHUPS.dir/src/common.c.s
 .PHONY : src/common.c.s
 
+src/file.o: src/file.c.o
+
+.PHONY : src/file.o
+
+# target to build an object file
+src/file.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CHUPS.dir/build.make CMakeFiles/CHUPS.dir/src/file.c.o
+.PHONY : src/file.c.o
+
+src/file.i: src/file.c.i
+
+.PHONY : src/file.i
+
+# target to preprocess a source file
+src/file.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CHUPS.dir/build.make CMakeFiles/CHUPS.dir/src/file.c.i
+.PHONY : src/file.c.i
+
+src/file.s: src/file.c.s
+
+.PHONY : src/file.s
+
+# target to generate assembly for a file
+src/file.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CHUPS.dir/build.make CMakeFiles/CHUPS.dir/src/file.c.s
+.PHONY : src/file.c.s
+
 src/host.o: src/host.c.o
 
 .PHONY : src/host.o
@@ -316,6 +343,9 @@ help:
 	@echo "... src/common.o"
 	@echo "... src/common.i"
 	@echo "... src/common.s"
+	@echo "... src/file.o"
+	@echo "... src/file.i"
+	@echo "... src/file.s"
 	@echo "... src/host.o"
 	@echo "... src/host.i"
 	@echo "... src/host.s"
