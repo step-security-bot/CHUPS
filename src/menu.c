@@ -10,6 +10,7 @@ Date : 01/03/2021
 
 #include "../include/textcolor.h"
 #include "../include/common.h"
+#include "../include/synack.h"
 #include "../include/host.h"
 #include "../include/menu.h"
 #include "../include/file.h"
@@ -24,20 +25,73 @@ void menu(void) {
         puts("#2  -  Add an host");
         puts("#3  -  Quit");
         printf("> ");
+        
         safeIntInput(&choice);
         textcolor(RESET, WHITE, BLACK);
         switch(choice) {
             case 1:
-                // TODO add menu option
+                
+                lookAtHosts();
                 break;
             case 2:
+                clearScreen();
                 addHost();
+                clearScreen();
             case 3:
             default:
                 break;
         }
     } while(choice != 3);
 
+   printf("Thank you ! ~ ~ Tchadel && Arthur\n");
+
+}
+
+void lookAtHosts() {
+    char lines[128][391]; // Pour stocker le fichier chups.dat
+    Host host;
+    int tmpPort,hostNumber;
+    enum scanType tmpSType;
+    char tmpHostname[256], tmpName[128];
+    readFile("chups.dat",lines, &hostNumber);
+
+
+    for(int i = 0; i < hostNumber; i++) {
+
+        char* token = strtok(lines[i], ","); 
+        if(token == NULL) continue;
+        strncpy(tmpName, token, 128);
+
+        token = strtok(NULL, ",");
+        if(token == NULL) continue;
+        sscanf(token, "%u", &tmpSType);
+
+        token = strtok(NULL, ",");
+        if(token == NULL) continue;
+        strncpy(tmpHostname, token, 256);
+
+        token= strtok(NULL, ",");
+        if(token == NULL) continue;
+        sscanf(token, "%d", &tmpPort);
+
+        initHost(&host, tmpName, tmpSType, tmpHostname, tmpPort);
+
+        isOnline(&host);
+
+        if (host.state == ONLINE) {
+            printf("%32s %5d  :  ", host.name, host.port);
+            
+            textcolor(RESET, BLACK, GREEN);
+            printf("ONLINE\n");
+            textcolor(RESET, WHITE, BLACK);
+        } else {
+            printf("%32s %5d  :  ", host.name, host.port);
+            
+            textcolor(RESET, BLACK, RED);
+            printf("OFFLINE\n");
+            textcolor(RESET, WHITE, BLACK);
+        }
+    }
 }
 
 void addHost(void) {
@@ -79,7 +133,7 @@ void addHost(void) {
     sanityzeString(name);
     sanityzeString(hostname);
 
-    sprintf(finalString, "%s,%u,%s,%d\n", name, sType, hostname, port);
+    sprintf(finalString, "\n%s,%u,%s,%d", name, sType, hostname, port);
 
     addToFile("chups.dat", finalString);
 

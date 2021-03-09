@@ -11,3 +11,5 @@ The following versions are supported by the security vulnerabilities disclosure.
 ## Reporting a Vulnerability
 
 Contact me at unguestdev@gmail.com. Expect a response within a week.
+
+Please indicate how you produce the security flaw(s) & make a related push request with detailled code.

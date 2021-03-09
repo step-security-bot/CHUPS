@@ -9,5 +9,6 @@ Date : 01/03/2021
 
 void menu(void);
 void addHost(void);
+void lookAtHosts(void);
 
 #endif

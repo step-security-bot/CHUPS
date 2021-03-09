@@ -34,9 +34,9 @@ void banner(void) {
     clearScreen();
 
     printf("\t\t\t");
-    textcolor(RESET, RED, RESET);
+
+    textcolor(RESET, RED, BLACK);
     printf("WELCOME TO CHUPS ! ver 0.1\n");
-    
     textcolor(RESET, WHITE, BLACK);
 
     printf("\t\t");

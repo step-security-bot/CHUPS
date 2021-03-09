@@ -20,7 +20,7 @@ Date : 02/03/2021
 void isOnline(Host *h) {
 
     char hostname[256];
-    getHostname(h, &hostname);
+    getHostname(h, hostname);
 
     if(!checkIp(hostname)) {
         printf("HostnameError : IP Address %s is not valid. Couldn't verify host's availability.", hostname);
