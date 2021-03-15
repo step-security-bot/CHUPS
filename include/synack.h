@@ -10,6 +10,7 @@ Date : 02/03/2021
 #include "host.h"
 #include <stdbool.h>
 
+int connect_wait (int sockno, struct sockaddr * addr, size_t addrlen, struct timeval * timeout);
 void isOnline(Host *h);
 bool checkIp(const char* ip);
 

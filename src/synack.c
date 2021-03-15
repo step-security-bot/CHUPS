@@ -5,17 +5,90 @@ Date : 02/03/2021
 */
 
 #include <stdio.h>
-#include <sys/types.h>
-#include <unistd.h>
-#include <sys/socket.h>
-#include <arpa/inet.h>
-#include <netinet/in.h>
-#include <netdb.h>
+#include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
 
+#include <unistd.h>
+#include <errno.h>
+#include <fcntl.h>
+
+#include <sys/socket.h>
+#include <sys/types.h>
+#include <sys/select.h>
+
+#include <arpa/inet.h>
+#include <netinet/in.h>
+#include <netdb.h>
+
+
 #include "../include/host.h"
 #include "../include/synack.h"
+
+int connect_wait (int sockno, struct sockaddr * addr, size_t addrlen, struct timeval * timeout)
+{
+	int res, opt;
+
+	// get socket flags
+	if ((opt = fcntl (sockno, F_GETFL, NULL)) < 0) {
+		return -1;
+	}
+
+	// set socket non-blocking
+	if (fcntl (sockno, F_SETFL, opt | O_NONBLOCK) < 0) {
+		return -1;
+	}
+
+	// try to connect
+	if ((res = connect (sockno, addr, addrlen)) < 0) {
+		if (errno == EINPROGRESS) {
+			fd_set wait_set;
+
+			// make file descriptor set with socket
+			FD_ZERO (&wait_set);
+			FD_SET (sockno, &wait_set);
+
+			// wait for socket to be writable; return after given timeout
+			res = select (sockno + 1, NULL, &wait_set, NULL, timeout);
+		}
+	}
+	// connection was successful immediately
+	else {
+		res = 1;
+	}
+
+	// reset socket flags
+	if (fcntl (sockno, F_SETFL, opt) < 0) {
+		return -1;
+	}
+
+	// an error occured in connect or select
+	if (res < 0) {
+		return -1;
+	}
+	// select timed out
+	else if (res == 0) {
+		errno = ETIMEDOUT;
+		return 1;
+	}
+	// almost finished...
+	else {
+		socklen_t len = sizeof (opt);
+
+		// check for errors in socket layer
+		if (getsockopt (sockno, SOL_SOCKET, SO_ERROR, &opt, &len) < 0) {
+			return -1;
+		}
+
+		// there was an error
+		if (opt) {
+			errno = opt;
+			return -1;
+		}
+	}
+
+	return 0;
+}
 
 void isOnline(Host *h) {
 
@@ -41,7 +114,13 @@ void isOnline(Host *h) {
 
     inet_pton(AF_INET, hostname, &hint.sin_addr);
 
-    int isConnected = connect(sock, (struct sockaddr*)&hint, sizeof(hint));
+    struct timeval tv;
+    tv.tv_sec = 2;
+    tv.tv_usec = 0;
+
+
+    //int isConnected = connect(sock, (struct sockaddr*)&hint, sizeof(hint));
+    int isConnected = connect_wait (sock, (struct sockaddr *)&hint, sizeof(hint), &tv);
 
     close(sock);
 

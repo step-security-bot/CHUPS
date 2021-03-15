@@ -2,6 +2,7 @@
     "files.associations": {
         "textcolor.h": "c",
         "common.h": "c",
-        "cstring": "c"
+        "cstring": "c",
+        "socket.h": "c"
     }
 }
