@@ -5,15 +5,12 @@ Date : 15/03/2021
 */
 
 #ifndef __ICMP__H
-#include <netinet/ip_icmp.h>
+#define __ICMP__H
 
-#define PING_PACKET_SIZE
+#define DEF_DATA_LEN 56
+#define MAX_IP_LEN 60
+#define MAX_ICMP_LEN 76
 
-typedef struct {
-    struct icmp header;
-    char msg[PING_PACKET_SIZE-sizeof(struct icmphdr)];
-} pingPacket;
-
-unsigned short checksum(void *packet, int length);
+int checksum(unsigned short *packet, int size);
 
 #endif
