@@ -17,6 +17,7 @@ Date : 02/03/2021
 #include <sys/types.h>
 #include <sys/select.h>
 #include <sys/time.h>
+#include <time.h>
 
 #include <arpa/inet.h>
 #include <netinet/in.h>
@@ -123,11 +124,10 @@ void isOnline(Host *h, float *pingTime) {
     //int isConnected = connect(sock, (struct sockaddr*)&hint, sizeof(hint));
 
 	clock_t start, end;
-
 	start = clock();
     
 	int isConnected = connect_wait (sock, (struct sockaddr *)&hint, sizeof(hint), &tv); // Fonction utilisant un timeout
-	
+
 	end = clock();
 	*pingTime = ( ((double) (end - start)) / CLOCKS_PER_SEC) * 100000;
 
