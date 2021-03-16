@@ -4,8 +4,7 @@ Name : CHUPS.icmpH
 Date : 15/03/2021
 */
 
-#ifdef __ICMP__H
-
+#ifndef __ICMP__H
 #include <netinet/ip_icmp.h>
 
 #define PING_PACKET_SIZE

@@ -16,6 +16,7 @@ Date : 02/03/2021
 #include <sys/socket.h>
 #include <sys/types.h>
 #include <sys/select.h>
+#include <sys/time.h>
 
 #include <arpa/inet.h>
 #include <netinet/in.h>
@@ -90,7 +91,7 @@ int connect_wait (int sockno, struct sockaddr * addr, size_t addrlen, struct tim
 	return 0;
 }
 
-void isOnline(Host *h) {
+void isOnline(Host *h, float *pingTime) {
 
     char hostname[256];
     getHostname(h, hostname);
@@ -115,12 +116,20 @@ void isOnline(Host *h) {
     inet_pton(AF_INET, hostname, &hint.sin_addr);
 
     struct timeval tv;
-    tv.tv_sec = 2;
+    tv.tv_sec = 2; // Mettre un timeout de 2 secondes
     tv.tv_usec = 0;
 
 
     //int isConnected = connect(sock, (struct sockaddr*)&hint, sizeof(hint));
-    int isConnected = connect_wait (sock, (struct sockaddr *)&hint, sizeof(hint), &tv);
+
+	clock_t start, end;
+
+	start = clock();
+    
+	int isConnected = connect_wait (sock, (struct sockaddr *)&hint, sizeof(hint), &tv); // Fonction utilisant un timeout
+	
+	end = clock();
+	*pingTime = ( ((double) (end - start)) / CLOCKS_PER_SEC) * 100000;
 
     close(sock);
 

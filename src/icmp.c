@@ -27,11 +27,5 @@ unsigned short checksum(void *packet, int length) {
     return result;
 }
 
-void sendPing(int ping_sockfd,
-              struct sockaddr_in *ping_addr,
-              char *ping_dom,
-              char *ping_ip,
-              char *rev_host) {
-
-
+void sendPing(int ping_sockfd, struct sockaddr_in *ping_addr, char *ping_dom, char *ping_ip, char *rev_host) {
 }

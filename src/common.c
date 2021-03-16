@@ -18,7 +18,6 @@ void safeStrInput(char *buf, int size) {
 
     if(fgets(tmp, size, stdin)) strncpy(buf, tmp, size);
     else puts("ERROR while getting input...");
-
 }
 
 void safeIntInput(int *buf) {

@@ -11,7 +11,7 @@ Date : 02/03/2021
 #include <stdbool.h>
 
 int connect_wait (int sockno, struct sockaddr * addr, size_t addrlen, struct timeval * timeout);
-void isOnline(Host *h);
+void isOnline(Host *h, float *pingTime);
 bool checkIp(const char* ip);
 
 #endif

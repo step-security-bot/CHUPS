@@ -7,6 +7,7 @@ Date : 01/03/2021
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 #include "../include/textcolor.h"
 #include "../include/common.h"
@@ -76,13 +77,15 @@ void lookAtHosts() {
 
         initHost(&host, tmpName, tmpSType, tmpHostname, tmpPort);
 
-        isOnline(&host);
+        float pingTime;
+
+        isOnline(&host, &pingTime);
 
         if (host.state == ONLINE) {
             printf("%32s %5d  :  ", host.name, host.port);
             
             textcolor(RESET, BLACK, GREEN);
-            printf("ONLINE\n");
+            printf("ONLINE (ping in %.1f ms)\n", pingTime);
             textcolor(RESET, WHITE, BLACK);
         } else {
             printf("%32s %5d  :  ", host.name, host.port);
@@ -96,6 +99,8 @@ void lookAtHosts() {
 
 void addHost(void) {
     clearScreen();
+
+
 
     char name[128];
     char hostname[256];
