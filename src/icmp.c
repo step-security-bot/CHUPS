@@ -1,31 +1,21 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <arpa/inet.h>
-#include <netdb.h>
-#include <unistd.h>
-#include <netinet/ip_icmp.h>
-#include "../include/icmp.h"
-
-unsigned short checksum(void *packet, int length) {
+int checksum(unsigned short *packet, int size) {
+    int sum = 0;
     unsigned short *p = packet;
-    unsigned int sum = 0;
-    unsigned short result;
+    unsigned short result = 0;
 
-    for (sum = 0; length > 1; length -= 2)
+    while (size > 1) {
         sum += *p++;
-    if (length == 1)
-        sum += *(unsigned char*)p;
+        size -= 2;
+    }
+
+    if (size == 1) {
+        *(unsigned char *) (&result) = *(unsigned char *) p;
+        sum += result;
+    }
 
     sum = (sum >> 16) + (sum & 0xFFFF);
     sum += (sum >> 16);
     result = ~sum;
 
     return result;
-}
-
-void sendPing(int ping_sockfd, struct sockaddr_in *ping_addr, char *ping_dom, char *ping_ip, char *rev_host) {
 }
