@@ -20,3 +20,5 @@ Chaque type de scan sera codé dans un fichier portant le nom du scan.
 Les noms de variables/fonctions/typedefs sont en camelCase et en Anglais.
 
 La doc et les commentaires _inline_ sont en Français.
+
+Le projet utilise les sockets UNIX donc pas de portabilité sur Windows.

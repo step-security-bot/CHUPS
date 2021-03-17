@@ -1,0 +1,31 @@
+{
+  "name": "chups-web",
+  "version": "1.0.0",
+  "description": "A data visualizer for CHUPS",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unguest/CHUPS"
+  },
+  "keywords": [
+    "chups",
+    "web",
+    "ui",
+    "data",
+    "visualization"
+  ],
+  "author": "arthur pons <unguest.dev@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-free-solid": "^5.0.13",
+    "body-parser": "^1.19.0",
+    "bulma": "^0.9.2",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}
