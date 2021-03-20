@@ -8,6 +8,7 @@ Date : 03/03/2021
 #define __FILE__H__
 
 void addToFile(const char *filename, const char *content);
+void writeToFile(const char *filename, const char *content);
 void readFile(const char*filename, char linesBuf[128][391], int *hostNumber);
 
 #endif

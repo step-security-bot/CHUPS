@@ -7,10 +7,15 @@ Date : 01/03/2021
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 #include "../include/common.h"
 
 void clearScreen(void) {
     printf("\e[1;1H\e[2J\n");
+}
+
+void waitSecs(int seconds) {
+    usleep(seconds * 1000000);
 }
 
 void safeStrInput(char *buf, int size) {

@@ -15,6 +15,7 @@ Date : 01/03/2021
 #include "../include/host.h"
 #include "../include/menu.h"
 #include "../include/file.h"
+#include "../include/logs.h"
 
 void menu(void) {
 
@@ -24,25 +25,30 @@ void menu(void) {
         textcolor(RESET, GREEN, BLACK);
         puts("#1  -  Look at hosts");
         puts("#2  -  Add an host");
-        puts("#3  -  Quit");
+        puts("#3  -  Watch mode");
+        puts("#4  -  Quit");
         printf("> ");
         
         safeIntInput(&choice);
         textcolor(RESET, WHITE, BLACK);
         switch(choice) {
             case 1:
-                
                 lookAtHosts();
                 break;
             case 2:
                 clearScreen();
                 addHost();
                 clearScreen();
+                break;
             case 3:
+            watchHosts();
+            break;
+            case 4:
+            continue;
             default:
                 break;
         }
-    } while(choice != 3);
+    } while(choice != 4);
 
    printf("Thank you ! ~ ~ Tchadel && Arthur\n");
 
@@ -94,6 +100,50 @@ void lookAtHosts() {
             printf("OFFLINE\n");
             textcolor(RESET, WHITE, BLACK);
         }
+        }
+}
+
+void watchHosts() {
+    char lines[128][391]; // Pour stocker le fichier chups.dat
+    char tmpHostname[256], tmpName[128];
+
+    Host host;
+    enum scanType tmpSType;
+
+    int tmpPort,hostNumber, onlineHostsNumber = 0;
+    float pingTime;
+
+    while(true) {
+        
+        readFile("chups.dat",lines, &hostNumber);
+
+        for(int i = 0; i < hostNumber; i++) {
+
+            char* token = strtok(lines[i], ","); 
+            if(token == NULL) continue;
+            strncpy(tmpName, token, 128);
+
+            token = strtok(NULL, ",");
+            if(token == NULL) continue;
+            sscanf(token, "%u", &tmpSType);
+
+            token = strtok(NULL, ",");
+            if(token == NULL) continue;
+            strncpy(tmpHostname, token, 256);
+
+            token= strtok(NULL, ",");
+            if(token == NULL) continue;
+            sscanf(token, "%d", &tmpPort);
+
+            initHost(&host, tmpName, tmpSType, tmpHostname, tmpPort);
+            isOnline(&host, &pingTime);
+            makeLog(&host, pingTime);
+
+            if(host.state == ONLINE) onlineHostsNumber++;
+
+        }
+
+        waitSecs(2);
     }
 }
 

@@ -4,7 +4,11 @@
   "description": "A data visualizer for CHUPS",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon index.js"
+    "run": "node index.js",
+    "test": "nodemon index.js",
+    "css-build": "node-sass --omit-source-map-url sass/style.scss public/bulma.css",
+    "css-watch": "npm run css-build -- --watch",
+    "start": "npm run css-watch"
   },
   "repository": {
     "type": "git",
@@ -23,9 +27,12 @@
     "@fortawesome/fontawesome": "^1.1.8",
     "@fortawesome/fontawesome-free-solid": "^5.0.13",
     "body-parser": "^1.19.0",
-    "bulma": "^0.9.2",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "nodemon": "^2.0.7"
+  },
+  "devDependencies": {
+    "bulma": "^0.9.2",
+    "node-sass": "^5.0.0"
   }
 }

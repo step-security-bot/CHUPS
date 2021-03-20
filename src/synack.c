@@ -129,7 +129,7 @@ void isOnline(Host *h, float *pingTime) {
 	int isConnected = connect_wait (sock, (struct sockaddr *)&hint, sizeof(hint), &tv); // Fonction utilisant un timeout
 
 	end = clock();
-	*pingTime = ( ((double) (end - start)) / CLOCKS_PER_SEC) * 100000;
+	*pingTime = ( ((double) (end - start)) / CLOCKS_PER_SEC) * 100000; // Convertir en millisecondes
 
     close(sock);
 

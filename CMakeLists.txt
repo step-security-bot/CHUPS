@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.0)
 project(CHUPS)
 
 set(CMAKE_C_STANDARD 11)
-set(CMAKE_C_FLAGS "-g -O0 -Wall")
+set(CMAKE_C_FLAGS "-g -O0 -Wall --std=c11")
 set(CMAKE_COMPILER_IS_GNUCC TRUE)
 
 set(SRCS
@@ -14,6 +14,7 @@ set(SRCS
     src/synack.c
     src/menu.c
     src/file.c
+    src/logs.c
     )
 
 set(HEADERS
@@ -23,6 +24,7 @@ set(HEADERS
     include/synack.h
     include/menu.h
     include/file.h
+    include/logs.h
     )
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)

@@ -4,25 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" type="text/css" href="semantic.css">
+    <link rel="stylesheet" type="text/css" href="bulma.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <meta http-equiv="refresh" content="4" >
 
     <title>CHUPS Web</title>
 </head>
 <body>
     <main>
-        <h1  id="main-title">Welcome to CHUPS Web !</h1>
+        <h1 class="title" id="main-title">Welcome to CHUPS Web !</h1>
 
-        <h3>Here is an overview of your tracked hosts :</h3>
-    
+        <h3 class="subtitle">Here is an overview in live of your tracked hosts :</h3>
         <p>In order for this webpage to display fresh info, it is recommended to let CHUPS CLI running in background in watch mode.</p>
 
+        <%- include ('liveView') %>
         
     </main>
-
-
-
     
 </body>
 </html>
