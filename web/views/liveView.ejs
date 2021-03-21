@@ -26,9 +26,9 @@
                 <% for (var j = 0; j < 5; j++ ) {%>
                   <% if (locals.users[i][j] == "Online") {%>
                     <td style="background-color: green;"><%= locals.users[i][j]%></td>
-                <% } else if (locals.users[i][j] == "Offline") {%>
+                  <% } else if (locals.users[i][j] == "Offline") {%>
                     <td style="background-color: red;"><%= locals.users[i][j]%></td>
-                <%} else {%>
+                  <%} else {%>
                     <td><%= locals.users[i][j]%></td>
                 <%}%>
                 <%}%>

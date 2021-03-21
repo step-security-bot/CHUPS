@@ -8,6 +8,7 @@ CMakeFiles/*
 bin/*
 chups.dat
 *.lastest
+*.zip
 
 # Object files
 *.o

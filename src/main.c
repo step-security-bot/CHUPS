@@ -42,7 +42,7 @@ void banner(void) {
     printf("\t\t");
 
     textcolor(BLINK, RED, BLACK);
-    printf("%sCréé par un noir un blanc et un suisse.%s\n", BLINKING, NORMAL);
+    printf("%sCréé par un noir un blanc et un suisse (enfin pas encore...).%s\n", BLINKING, NORMAL);
     textcolor(RESET, WHITE, BLACK);
 }
 

@@ -44,6 +44,8 @@ npm run-script run
 
 Elle démarrera sur le port 80 sauf si vous avez spécifié la variable d'environnement ```process.env.PORT``` au préalable.
 
+Les données temporaires sont strockées dans des fichiers en extension .lastest. Afin de tous les supprimer, un fichier ```purge.sh``` est inclut.
+
 ## Règles de développement
 
 Les noms de variables/fonctions/typedefs sont en camelCase et en Anglais.

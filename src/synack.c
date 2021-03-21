@@ -30,7 +30,7 @@ Date : 02/03/2021
 int connect_wait (int sockno, struct sockaddr * addr, size_t addrlen, struct timeval * timeout)
 {
 	int res, opt;
-
+	
 	// get socket flags
 	if ((opt = fcntl (sockno, F_GETFL, NULL)) < 0) {
 		return -1;
