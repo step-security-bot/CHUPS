@@ -4,26 +4,30 @@ Name : CHUPS.synackC
 Date : 02/03/2021
 */
 
+// Includes de base
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
 
+// Includes UNIX
 #include <unistd.h>
 #include <errno.h>
 #include <fcntl.h>
 
+// Includes pour les sockets UNIX
 #include <sys/socket.h>
 #include <sys/types.h>
 #include <sys/select.h>
 #include <sys/time.h>
 #include <time.h>
 
+// Includes pour les tructures additionnelles
 #include <arpa/inet.h>
 #include <netinet/in.h>
 #include <netdb.h>
 
-
+// Includes des libs custom
 #include "../include/host.h"
 #include "../include/synack.h"
 
