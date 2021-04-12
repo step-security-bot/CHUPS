@@ -44,33 +44,6 @@ int checksum(unsigned short *payload, int size) {
     return result;
 }
 
-//void sendPing(char *host) {
-//    struct hostent *h;
-//    struct sockaddr_in dest;
-//    struct icmp *p;
-//    int sock;
-//    char packet[DEF_DATA_LEN + MAX_IP_LEN + MAX_ICMP_LEN];
-//
-//
-//    // Verifier que le socket se créer correctement
-//    if ((sock = socket(AF_INET, SOCK_RAW, 1)) < 0) {
-//        printf("unable to create socket");
-//        return;
-//    }
-//
-//    // Affecter la taille d'une adresse IP à la variable dest
-//    memset(&dest, 0, sizeof(struct sockaddr_in));
-//
-//    // dest.sin_family = AF_INET;
-//
-//    if (!(h = getaddrinfo(host))) {
-//
-//    }
-//
-//
-//
-//}
-
 void sendPing(char *host) {
     struct addrinfo hints, *result;
     int sock, ioLen;
