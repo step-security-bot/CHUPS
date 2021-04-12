@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make : on entre dans le répertoire « /home/arthur/Projects/CHUPS »
+make : on quitte le répertoire « /home/arthur/Projects/CHUPS »
+ 
+make: *** Pas de cible spécifiée et aucun makefile n'a été trouvé. Arrêt.
+ 

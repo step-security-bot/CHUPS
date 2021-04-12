@@ -1,0 +1,310 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** Aucune règle pour fabriquer la cible « all ». Arrêt.
+ 
+# GNU Make 4.3
+# Construit pour x86_64-pc-linux-gnu
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# Licence GPLv3+ : GNU GPL version 3 ou ultérieure <http://gnu.org/licenses/gpl.html>
+# Ceci est un logiciel libre : vous êtes autorisé à le modifier et à la redistribuer.
+# Il ne comporte AUCUNE GARANTIE, dans la mesure de ce que permet la loi.
+ 
+
+# Base de données de Make, imprimée le Mon Apr 12 13:15:38 2021
+
+# Variables
+
+# environnement
+NO_AT_BRIDGE = 1
+# environnement
+TERMINATOR_DBUS_NAME = net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873
+# environnement
+GJS_DEBUG_OUTPUT = stderr
+# environnement
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-edc58f25-2326-4633-a5ad-4ace8c068fe2.sock
+# environnement
+WINDOWPATH = 2
+# environnement
+TERMINATOR_UUID = urn:uuid:fb2d5448-8d79-4241-9eda-21d09783ef06
+# environnement
+GDM_LANG = fr_FR.UTF-8
+# défaut
+MAKE_COMMAND := make
+# automatique
+@D = $(patsubst %/,%,$(dir $@))
+# environnement
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# défaut
+.VARIABLES := 
+# environnement
+PWD = /home/arthur/Projects/CHUPS
+# automatique
+%D = $(patsubst %/,%,$(dir $%))
+# environnement
+LSCOLORS = Gxfxcxdxbxegedabagacad
+# environnement
+MAIL = /var/spool/mail/arthur
+# environnement
+XDG_DATA_DIRS = /home/arthur/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/
+# environnement
+OLDPWD = /home/arthur/Projects
+# automatique
+^D = $(patsubst %/,%,$(dir $^))
+# environnement
+VSCODE_LOG_STACK = false
+# automatique
+%F = $(notdir $%)
+# environnement
+LANG = fr_FR.UTF-8
+# environnement
+XAUTHORITY = /run/user/1000/gdm/Xauthority
+# défaut
+.LOADED := 
+# défaut
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# makefile
+MAKEFLAGS = pqrR
+# environnement
+ANDROID_NDK_HOME = /opt/android-ndk
+# environnement
+TERMINATOR_DBUS_PATH = /net/tenshu/Terminator2
+# makefile
+CURDIR := /home/arthur/Projects/CHUPS
+# environnement
+VSCODE_PIPE_LOGGING = true
+# environnement
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# automatique
+*D = $(patsubst %/,%,$(dir $*))
+# environnement
+MFLAGS = -pqrR
+# environnement
+SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
+# défaut
+.SHELLFLAGS := -c
+# automatique
++D = $(patsubst %/,%,$(dir $+))
+# environnement
+P9K_SSH = 0
+# environnement
+XDG_SESSION_DESKTOP = gnome-xorg
+# environnement
+VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"Code - OSS","submitURL":"","uploadToServer":false}
+# makefile
+MAKEFILE_LIST := 
+# automatique
+@F = $(notdir $@)
+# environnement
+ZSH = /home/arthur/.oh-my-zsh
+# environnement
+VSCODE_VERBOSE_LOGGING = true
+# environnement
+VSCODE_PID = 28961
+# environnement
+XDG_SESSION_TYPE = x11
+# automatique
+?D = $(patsubst %/,%,$(dir $?))
+# environnement
+LCLIMPORTDIR = /usr/share/splint/imports
+# environnement
+SESSION_MANAGER = local/Nap0leon:@/tmp/.ICE-unix/784,unix/Nap0leon:/tmp/.ICE-unix/784
+# automatique
+*F = $(notdir $*)
+# environnement
+CHROME_DESKTOP = code-oss.desktop
+# environnement
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# automatique
+<D = $(patsubst %/,%,$(dir $<))
+# environnement
+P9K_TTY = old
+# environnement
+VSCODE_NLS_CONFIG = {"locale":"fr","availableLanguages":{},"_languagePackSupport":true}
+# environnement
+BREAKPAD_DUMP_LOCATION = /home/arthur/.config/Code - OSS/exthost Crash Reports
+# défaut
+MAKE_HOST := x86_64-pc-linux-gnu
+# environnement
+ANDROID_HOME = /opt/android-sdk
+# makefile
+SHELL = /bin/sh
+# défaut
+MAKECMDGOALS := all
+# environnement
+GJS_DEBUG_TOPICS = JS ERROR;JS LOG
+# environnement
+SHLVL = 1
+# environnement
+ANDROID_NDK = /opt/android-ndk
+# environnement
+MAKELEVEL := 0
+# défaut
+MAKE = $(MAKE_COMMAND)
+# environnement
+PATH = /opt/jython/bin/:/usr/local/bin:/usr/bin:/usr/local/sbin:/opt/android-ndk:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/opt/android-sdk/tools/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/opt/telegram/telegram-cli-git/bin
+# défaut
+MAKEFILES := 
+# environnement
+MOTD_SHOWN = pam
+# automatique
+^F = $(notdir $^)
+# environnement
+INVOCATION_ID = fe31d4fb9be9462981d1afbf8a246bea
+# environnement
+VSCODE_LOG_NATIVE = false
+# environnement
+USERNAME = arthur
+# automatique
+?F = $(notdir $?)
+# environnement
+XDG_CURRENT_DESKTOP = GNOME
+# environnement
+MKLROOT = /opt/intel/mkl
+# environnement
+LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+# automatique
++F = $(notdir $+)
+# environnement
+LESS = -R
+# environnement
+DESKTOP_SESSION = gnome-xorg
+# environnement
+ORIGINAL_XDG_CURRENT_DESKTOP = GNOME
+# directive « override »
+GNUMAKEFLAGS := 
+# environnement
+LOGNAME = arthur
+# environnement
+GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code-oss.desktop
+# makefile
+.DEFAULT_GOAL := 
+# environnement
+SYSTEMD_EXEC_PID = 1009
+# environnement
+DISPLAY = :0
+# environnement
+USER = arthur
+# défaut
+MAKE_VERSION := 4.3
+# environnement
+MANAGERPID = 706
+# environnement
+LARCH_PATH = /usr/share/splint/lib
+# environnement
+GIO_LAUNCHED_DESKTOP_FILE_PID = 11852
+# environnement
+PAGER = less
+# environnement
+VSCODE_NODE_CACHED_DATA_DIR = /home/arthur/.config/Code - OSS/CachedData/2b9aebd5354a3629c3aba0a5f5df49f43d6689f8
+# environnement
+_ = /usr/bin/make
+# environnement
+MOZ_PLUGIN_PATH = /usr/lib/mozilla/plugins
+# environnement
+XDG_RUNTIME_DIR = /run/user/1000
+# environnement
+COLORTERM = truecolor
+# environnement
+JOURNAL_STREAM = 8:24601
+# environnement
+XDG_SESSION_CLASS = user
+# environnement
+VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
+# environnement
+HOME = /home/arthur
+# environnement
+ELECTRON_RUN_AS_NODE = 1
+# environnement
+ 
+VSCODE_IPC_HOOK = /run/user/1000/vscode-0be5d10c-1.54.3-main.sock
+# environnement
+TERM = xterm-256color
+# défaut
+.RECIPEPREFIX := 
+# automatique
+<F = $(notdir $<)
+# défaut
+SUFFIXES := 
+# environnement
+_P9K_TTY = /dev/pts/0
+# environnement
+VSCODE_CLI = 1
+# environnement
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environnement
+VTE_VERSION = 6400
+# défaut
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink guile load
+# environnement
+XDG_MENU_PREFIX = gnome-
+# environnement
+GDMSESSION = gnome-xorg
+# stats des tables de hachage de la variable « set » :
+# Load=112/1024=11%, Rehash=0, Collisions=7/139=5%
+
+# Valeurs de variable spécifiques au motif
+
+# pas de valeurs de variable spécifiques au motif
+
+# Répertoires
+
+# . (périphérique 2050, inode 4220333) : 18 fichier(s), aucune impossibilité(s).
+
+# 18 fichier(s), aucune impossibilités dans 1 répertoires.
+
+# Règles implicites
+
+# Pas de règle implicite.
+
+# Fichiers
+
+# Pas une cible :
+Makefile:
+#  La recherche de règle implicite a été effectuée.
+# Le fichier n'existe pas.
+#  Le fichier a été mis à jour.
+#  N'a pas pu être mis à jour.
+
+# Pas une cible :
+.DEFAULT:
+#  La recherche de règle implicite n'a pas été effectuée.
+#  Heure de modification jamais vérifiée.
+#  Le fichier n'a pas été mis à jour.
+
+# Pas une cible :
+all:
+#  Cible de la ligne de commande.
+#  La recherche de règle implicite a été effectuée.
+# Le fichier n'existe pas.
+#  Le fichier n'a pas été mis à jour.
+
+# Pas une cible :
+makefile:
+#  La recherche de règle implicite a été effectuée.
+# Le fichier n'existe pas.
+#  Le fichier a été mis à jour.
+#  N'a pas pu être mis à jour.
+
+# Pas une cible :
+GNUmakefile:
+#  La recherche de règle implicite a été effectuée.
+# Le fichier n'existe pas.
+#  Le fichier a été mis à jour.
+#  N'a pas pu être mis à jour.
+
+# stats des tables de hachage des fichiers :
+# Load=6/1024=1%, Rehash=0, Collisions=0/15=0%
+# Chemins de recherche VPATH
+
+# Aucun chemin de recherche « vpath ».
+
+# Aucun chemin de recherche général (variable « VPATH »).
+
+# strcache utilisé : 1 (0) / chaînes = 26 / espace = 218 o / moy = 8 o
+# current buf: size = 8162 B / used = 218 B / count = 26 / avg = 8 B
+
+# performance strcache : lookups = 29 / accès = 10%
+# stats des tables de hachage :
+# Load=26/8192=0%, Rehash=0, Collisions=0/29=0%
+# Base de données de Make terminée le Mon Apr 12 13:15:38 2021
+
+ 
