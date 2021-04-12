@@ -46,11 +46,6 @@ int checksum(unsigned short *payload, int size) {
 
 void sendPing(char *host) {
     struct addrinfo hints, *result;
-    int sock, ioLen;
-    // Le nombre de protocol 1 corresponds au protocol ICMP
-    int protocol = 1;
-    struct icmp *payload;
-    char packet[DEF_DATA_LEN + MAX_IP_LEN + MAX_ICMP_LEN];
 
     memset(&hints, 0, sizeof(struct addrinfo));
     hints.ai_family = PF_UNSPEC;
@@ -61,62 +56,81 @@ void sendPing(char *host) {
         return;
     }
 
-    if ((sock = socket(result->ai_family, result->ai_socktype, protocol)) < 0) {
-        printf("Le socket ne s'est pas ouvert correctement");
-        return;
-    }
+    if (result->ai_family == AF_INET6) {
+        int sock, ioLen;
+        // Le nombre de protocol 58 corresponds au protocol ICMPv6
+        int protocol = 58;
+        struct icmp6_hdr *payload;
+        char packet[DEF_DATA_LEN + MAX_IP_LEN + MAX_ICMP_LEN];
 
-    payload = (struct icmp *) packet;
-    memset(payload, 0, sizeof(packet));
-    payload->icmp_type = ICMP_ECHO;
-    payload->icmp_cksum = checksum((unsigned short *) payload, sizeof(packet));
+        printf("test");
 
-    if (result->ai_family == AF_INET6)
+        if ((sock = socket(result->ai_family, result->ai_socktype, protocol)) < 0) {
+            printf("Le socket ne s'est pas ouvert correctement");
+            return;
+        }
+
+        payload = (struct icmp6_hdr *) packet;
+        memset(payload, 0, sizeof(packet));
+        payload->icmp6_type = ICMP6_ECHO_REQUEST;
+        payload->icmp6_cksum = checksum((unsigned short *) payload, sizeof(packet));
+
         ioLen = sendto(sock, packet, sizeof(packet), 0, result->ai_addr, sizeof(struct sockaddr_in6));
-    else
-        ioLen = sendto(sock, packet, sizeof(packet), 0, result->ai_addr, sizeof(struct sockaddr_in));
 
-    if (ioLen < 0 || ioLen != sizeof(packet)) {
-        printf("Erreur lors de l'envoi du packet");
-        return;
-    }
-
-    while (1) {
-        if (result->ai_family == AF_INET6) {
+        while (1) {
             struct sockaddr_in6 source;
             socklen_t sourceLen = sizeof(source);
 
-            if (( ioLen = recvfrom( sock, packet, sizeof(packet), 0, (struct sockaddr *) &source, &sourceLen ) ) < 0) {
+            if ((ioLen = recvfrom(sock, packet, sizeof(packet), 0, (struct sockaddr *) &source, &sourceLen)) < 0) {
                 printf("L'hôte n'a pas répondu");
                 continue;
             }
 
             if (ioLen >= 76) {
-                struct iphdr * iphdr = (struct iphdr *) packet;
-
-                payload = (struct icmp *) (packet + (iphdr->ihl << 2));
-
-                if (payload->icmp_type == ICMP_ECHOREPLY)
+                payload = (struct icmp6_hdr *) packet;
+                if (payload->icmp6_type == ICMP6_ECHO_REPLY)
                     break;
             }
-        } else {
+        }
+    } else {
+        int sock, ioLen;
+        // Le nombre de protocol 1 corresponds au protocol ICMP
+        int protocol = 1;
+        struct icmp *payload;
+        char packet[DEF_DATA_LEN + MAX_IP_LEN + MAX_ICMP_LEN];
+
+        if ((sock = socket(result->ai_family, result->ai_socktype, protocol)) < 0) {
+            printf("Le socket ne s'est pas ouvert correctement");
+            return;
+        }
+
+        payload = (struct icmp *) packet;
+        memset(payload, 0, sizeof(packet));
+        payload->icmp_type = ICMP_ECHO;
+        payload->icmp_cksum = checksum((unsigned short *) payload, sizeof(packet));
+
+        ioLen = sendto(sock, packet, sizeof(packet), 0, result->ai_addr, sizeof(struct sockaddr_in));
+
+        if (ioLen < 0 || ioLen != sizeof(packet)) {
+            printf("Erreur lors de l'envoi du packet");
+            return;
+        }
+
+        while (1) {
             struct sockaddr_in source;
             socklen_t sourceLen = sizeof(source);
 
-            if (( ioLen = recvfrom( sock, packet, sizeof(packet), 0, (struct sockaddr *) &source, &sourceLen ) ) < 0) {
+            if ((ioLen = recvfrom(sock, packet, sizeof(packet), 0, (struct sockaddr *) &source, &sourceLen)) < 0) {
                 printf("L'hôte n'a pas répondu");
                 continue;
             }
 
             if (ioLen >= 76) {
-                struct iphdr * iphdr = (struct iphdr *) packet;
-
+		        struct iphdr *iphdr = (struct iphdr *) packet;
                 payload = (struct icmp *) (packet + (iphdr->ihl << 2));
-
                 if (payload->icmp_type == ICMP_ECHOREPLY)
                     break;
             }
         }
-
     }
 }
