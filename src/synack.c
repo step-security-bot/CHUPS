@@ -98,7 +98,12 @@ int connect_wait (int sockno, struct sockaddr * addr, size_t addrlen, struct tim
 
 void isOnline(Host *h, float *pingTime) {
 
-    char hostname[256];
+	int sock;
+	short ipv6Detector = 0; // Sert à déterminer si il y a des ':' dans l'adresse IP
+	char hostname[256];
+	struct sockaddr_in hint;
+
+
     getHostname(h, hostname);
 
     if(!checkIp(hostname)) {
@@ -111,26 +116,40 @@ void isOnline(Host *h, float *pingTime) {
         return;
     }
 
-    int sock = socket(AF_INET, SOCK_STREAM, 0);
+	for(int i = 0; i < strlen(hostname); ++i) {
+		if(!strncmp(&hostname[i], ":", 1)) {
+			ipv6Detector = 1;
+			break;
+		}
+	}
 
-    struct sockaddr_in hint;
+	if(ipv6Detector == 1) {
+		sock = socket(AF_INET6, SOCK_STREAM, 0);
+		hint.sin_family = AF_INET6;
+		inet_pton(AF_INET6, hostname, &hint.sin_addr);
 
-    hint.sin_family = AF_INET;
+	} else  {
+		sock = socket(AF_INET, SOCK_STREAM, 0);
+		hint.sin_family = AF_INET;
+		inet_pton(AF_INET, hostname, &hint.sin_addr);
+
+	}
+
     hint.sin_port = htons(getPort(h));
 
-    inet_pton(AF_INET, hostname, &hint.sin_addr);
 
     struct timeval tv;
     tv.tv_sec = 2; // Mettre un timeout de 2 secondes
     tv.tv_usec = 0;
 
 
-    //int isConnected = connect(sock, (struct sockaddr*)&hint, sizeof(hint));
 
 	clock_t start, end;
 	start = clock();
     
 	int isConnected = connect_wait (sock, (struct sockaddr *)&hint, sizeof(hint), &tv); // Fonction utilisant un timeout
+	//int isConnected = connect(sock, (struct sockaddr*)&hint, sizeof(hint));
+
 
 	end = clock();
 	*pingTime = ( ((double) (end - start)) / CLOCKS_PER_SEC) * 100000; // Convertir en millisecondes
@@ -145,7 +164,7 @@ void isOnline(Host *h, float *pingTime) {
 
 bool checkIp(const char* ip)
 {
-    struct sockaddr_in sa;
-    int result = inet_pton(AF_INET, ip, &(sa.sin_addr));
+	struct sockaddr_in sa;
+    int result = inet_pton(AF_INET, ip, &(sa.sin_addr)) || inet_pton(AF_INET6, ip, &(sa.sin_addr));
     return result != 0;
 }
