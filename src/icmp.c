@@ -19,6 +19,9 @@
 #include <netinet/ip_icmp.h>
 #include <netdb.h>
 
+// Include pour la gestion du temps
+#include <time.h>
+
 // Include des libs custom
 #include "../include/icmp.h"
 
@@ -48,7 +51,7 @@ void sendPing(char *host) {
     struct addrinfo hints, *result;
 
     memset(&hints, 0, sizeof(struct addrinfo));
-    hints.ai_family = PF_UNSPEC;
+    hints.ai_family = AF_INET;
     hints.ai_socktype = SOCK_RAW;
 
     if ((getaddrinfo(host, 0, &hints, &result)) < 0) {
@@ -62,10 +65,10 @@ void sendPing(char *host) {
         int protocol = 58;
         struct icmp6_hdr *payload;
         char packet[DEF_DATA_LEN + MAX_IP_LEN + MAX_ICMP_LEN];
-
-        printf("test");
-
-        if ((sock = socket(result->ai_family, result->ai_socktype, protocol)) < 0) {
+	
+	    sock = socket(result->ai_family, result->ai_socktype, protocol);
+        
+	    if (sock < 0) {
             printf("Le socket ne s'est pas ouvert correctement");
             return;
         }
@@ -81,7 +84,9 @@ void sendPing(char *host) {
             struct sockaddr_in6 source;
             socklen_t sourceLen = sizeof(source);
 
-            if ((ioLen = recvfrom(sock, packet, sizeof(packet), 0, (struct sockaddr *) &source, &sourceLen)) < 0) {
+	        ioLen = recvfrom(sock, packet, sizeof(packet), 0, (struct sockaddr *) &source, &sourceLen);
+
+            if (ioLen < 0) {
                 printf("L'hôte n'a pas répondu");
                 continue;
             }
@@ -98,8 +103,10 @@ void sendPing(char *host) {
         int protocol = 1;
         struct icmp *payload;
         char packet[DEF_DATA_LEN + MAX_IP_LEN + MAX_ICMP_LEN];
-
-        if ((sock = socket(result->ai_family, result->ai_socktype, protocol)) < 0) {
+	
+	    sock = socket(result->ai_family, result->ai_socktype, protocol);
+        
+	    if (sock < 0) {
             printf("Le socket ne s'est pas ouvert correctement");
             return;
         }
@@ -120,7 +127,9 @@ void sendPing(char *host) {
             struct sockaddr_in source;
             socklen_t sourceLen = sizeof(source);
 
-            if ((ioLen = recvfrom(sock, packet, sizeof(packet), 0, (struct sockaddr *) &source, &sourceLen)) < 0) {
+	        ioLen = recvfrom(sock, packet, sizeof(packet), 0, (struct sockaddr *) &source, &sourceLen);
+
+            if (ioLen < 0) {
                 printf("L'hôte n'a pas répondu");
                 continue;
             }
