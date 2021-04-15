@@ -1,6 +1,37 @@
 make --dry-run --always-make --keep-going --print-directory
 make : on entre dans le répertoire « /home/arthur/Projects/CHUPS »
-make : on quitte le répertoire « /home/arthur/Projects/CHUPS »
+/usr/bin/cmake -S/home/arthur/Projects/CHUPS -B/home/arthur/Projects/CHUPS --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /home/arthur/Projects/CHUPS/CMakeFiles /home/arthur/Projects/CHUPS//CMakeFiles/progress.marks
+make -s -f CMakeFiles/Makefile2 all
+make[1] : on entre dans le répertoire « /home/arthur/Projects/CHUPS »
+make -s -f CMakeFiles/CHUPS.dir/build.make CMakeFiles/CHUPS.dir/depend
+make[2] : on entre dans le répertoire « /home/arthur/Projects/CHUPS »
+cd /home/arthur/Projects/CHUPS && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/arthur/Projects/CHUPS /home/arthur/Projects/CHUPS /home/arthur/Projects/CHUPS /home/arthur/Projects/CHUPS /home/arthur/Projects/CHUPS/CMakeFiles/CHUPS.dir/DependInfo.cmake --color=
+make[2] : on quitte le répertoire « /home/arthur/Projects/CHUPS »
+make -s -f CMakeFiles/CHUPS.dir/build.make CMakeFiles/CHUPS.dir/build
  
-make: *** Pas de cible spécifiée et aucun makefile n'a été trouvé. Arrêt.
+make[2] : on entre dans le répertoire « /home/arthur/Projects/CHUPS »
+/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/home/arthur/Projects/CHUPS/CMakeFiles --progress-num=1 "Building C object CMakeFiles/CHUPS.dir/src/main.c.o"
+/usr/bin/cc   -g -O0 -Wall --std=c11 -std=gnu11 -MD -MT CMakeFiles/CHUPS.dir/src/main.c.o -MF CMakeFiles/CHUPS.dir/src/main.c.o.d -o CMakeFiles/CHUPS.dir/src/main.c.o -c /home/arthur/Projects/CHUPS/src/main.c
+/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/home/arthur/Projects/CHUPS/CMakeFiles --progress-num=2 "Building C object CMakeFiles/CHUPS.dir/src/textcolor.c.o"
+/usr/bin/cc   -g -O0 -Wall --std=c11 -std=gnu11 -MD -MT CMakeFiles/CHUPS.dir/src/textcolor.c.o -MF CMakeFiles/CHUPS.dir/src/textcolor.c.o.d -o CMakeFiles/CHUPS.dir/src/textcolor.c.o -c /home/arthur/Projects/CHUPS/src/textcolor.c
+/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/home/arthur/Projects/CHUPS/CMakeFiles --progress-num=3 "Building C object CMakeFiles/CHUPS.dir/src/common.c.o"
+/usr/bin/cc   -g -O0 -Wall --std=c11 -std=gnu11 -MD -MT CMakeFiles/CHUPS.dir/src/common.c.o -MF CMakeFiles/CHUPS.dir/src/common.c.o.d -o CMakeFiles/CHUPS.dir/src/common.c.o -c /home/arthur/Projects/CHUPS/src/common.c
+/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/home/arthur/Projects/CHUPS/CMakeFiles --progress-num=4 "Building C object CMakeFiles/CHUPS.dir/src/host.c.o"
+/usr/bin/cc   -g -O0 -Wall --std=c11 -std=gnu11 -MD -MT CMakeFiles/CHUPS.dir/src/host.c.o -MF CMakeFiles/CHUPS.dir/src/host.c.o.d -o CMakeFiles/CHUPS.dir/src/host.c.o -c /home/arthur/Projects/CHUPS/src/host.c
+/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/home/arthur/Projects/CHUPS/CMakeFiles --progress-num=5 "Building C object CMakeFiles/CHUPS.dir/src/synack.c.o"
+/usr/bin/cc   -g -O0 -Wall --std=c11 -std=gnu11 -MD -MT CMakeFiles/CHUPS.dir/src/synack.c.o -MF CMakeFiles/CHUPS.dir/src/synack.c.o.d -o CMakeFiles/CHUPS.dir/src/synack.c.o -c /home/arthur/Projects/CHUPS/src/synack.c
+/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/home/arthur/Projects/CHUPS/CMakeFiles --progress-num=6 "Building C object CMakeFiles/CHUPS.dir/src/menu.c.o"
+/usr/bin/cc   -g -O0 -Wall --std=c11 -std=gnu11 -MD -MT CMakeFiles/CHUPS.dir/src/menu.c.o -MF CMakeFiles/CHUPS.dir/src/menu.c.o.d -o CMakeFiles/CHUPS.dir/src/menu.c.o -c /home/arthur/Projects/CHUPS/src/menu.c
+/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/home/arthur/Projects/CHUPS/CMakeFiles --progress-num=7 "Building C object CMakeFiles/CHUPS.dir/src/file.c.o"
+/usr/bin/cc   -g -O0 -Wall --std=c11 -std=gnu11 -MD -MT CMakeFiles/CHUPS.dir/src/file.c.o -MF CMakeFiles/CHUPS.dir/src/file.c.o.d -o CMakeFiles/CHUPS.dir/src/file.c.o -c /home/arthur/Projects/CHUPS/src/file.c
+/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/home/arthur/Projects/CHUPS/CMakeFiles --progress-num=8 "Building C object CMakeFiles/CHUPS.dir/src/logs.c.o"
+/usr/bin/cc   -g -O0 -Wall --std=c11 -std=gnu11 -MD -MT CMakeFiles/CHUPS.dir/src/logs.c.o -MF CMakeFiles/CHUPS.dir/src/logs.c.o.d -o CMakeFiles/CHUPS.dir/src/logs.c.o -c /home/arthur/Projects/CHUPS/src/logs.c
+/usr/bin/cmake -E cmake_echo_color --switch= --green --bold --progress-dir=/home/arthur/Projects/CHUPS/CMakeFiles --progress-num=9 "Linking C executable bin/CHUPS"
+/usr/bin/cmake -E cmake_link_script CMakeFiles/CHUPS.dir/link.txt --verbose=
+make[2] : on quitte le répertoire « /home/arthur/Projects/CHUPS »
+/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/home/arthur/Projects/CHUPS/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target CHUPS"
+make[1] : on quitte le répertoire « /home/arthur/Projects/CHUPS »
+/usr/bin/cmake -E cmake_progress_start /home/arthur/Projects/CHUPS/CMakeFiles 0
+make : on quitte le répertoire « /home/arthur/Projects/CHUPS »
  

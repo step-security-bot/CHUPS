@@ -52,4 +52,15 @@ Les noms de variables/fonctions/typedefs sont en camelCase et en Anglais.
 
 La doc et les commentaires _inline_ sont en Français.
 
-Le projet utilise les sockets UNIX donc est uniquement compatible avec Mac OS X & les distributions linux. 
+Le projet utilise les sockets UNIX donc est uniquement compatible avec Mac OS X & les distributions linux.
+
+## Logs de changements
+
+### Version 0.1
+- Support d'IPV4
+- Scans TCP
+- Interface web
+
+### Version 0.2
+- Support d'IPV6
+- Scans ICMP
