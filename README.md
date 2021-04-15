@@ -38,11 +38,13 @@ Ce mode est conçu pour fonctionner avec l'interface web qui relève les donnée
 Pour ce faire, démarrez l'interface web avec les commandes suivantes :
 
 ```bash
+sudo apt install node npm
 cd web
+npm install
 npm run-script run
 ```
 
-Elle démarrera sur le port 80 sauf si vous avez spécifié la variable d'environnement ```process.env.PORT``` au préalable.
+Elle démarrera sur le port 8080 sauf si vous avez spécifié la variable d'environnement ```process.env.PORT``` au préalable. L'URL d'accès est donc `http://localhost:8080`
 
 Les données temporaires sont strockées dans des fichiers en extension .lastest. Afin de tous les supprimer, un fichier ```purge.sh``` est inclut.
 
