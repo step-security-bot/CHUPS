@@ -25,6 +25,8 @@ Date : 02/03/2021
 // Includes pour les tructures additionnelles
 #include <arpa/inet.h>
 #include <netinet/in.h>
+#include <netinet/ip.h>
+#include <netinet/ip_icmp.h>
 #include <netdb.h>
 
 // Includes des libs custom
@@ -35,58 +37,58 @@ int connect_wait (int sockno, struct sockaddr * addr, size_t addrlen, struct tim
 {
 	int res, opt;
 	
-	// get socket flags
+	// Récupère les flags des sockets
 	if ((opt = fcntl (sockno, F_GETFL, NULL)) < 0) {
 		return -1;
 	}
 
-	// set socket non-blocking
+	// Mettre le socket en non bloquant
 	if (fcntl (sockno, F_SETFL, opt | O_NONBLOCK) < 0) {
 		return -1;
 	}
 
-	// try to connect
+	// Tentative de connexion
 	if ((res = connect (sockno, addr, addrlen)) < 0) {
 		if (errno == EINPROGRESS) {
 			fd_set wait_set;
 
-			// make file descriptor set with socket
+			// Initialiser un file descriptor avec le socket dedans
 			FD_ZERO (&wait_set);
 			FD_SET (sockno, &wait_set);
 
-			// wait for socket to be writable; return after given timeout
+			// Attendre que le socket soit utilisable, couper à la fin du timeout
 			res = select (sockno + 1, NULL, &wait_set, NULL, timeout);
 		}
 	}
-	// connection was successful immediately
+	// Connexion effective de suite
 	else {
 		res = 1;
 	}
 
-	// reset socket flags
+	// Réinitialisation des flags des sockets
 	if (fcntl (sockno, F_SETFL, opt) < 0) {
 		return -1;
 	}
 
-	// an error occured in connect or select
+	// Erreur dans le socket ou dans select
 	if (res < 0) {
 		return -1;
 	}
-	// select timed out
+	// Erreur : temps écoulé
 	else if (res == 0) {
 		errno = ETIMEDOUT;
 		return 1;
 	}
-	// almost finished...
+
 	else {
 		socklen_t len = sizeof (opt);
 
-		// check for errors in socket layer
+		// Vérification des erreurs dans le socket
 		if (getsockopt (sockno, SOL_SOCKET, SO_ERROR, &opt, &len) < 0) {
 			return -1;
 		}
 
-		// there was an error
+		// Dernière verification d'erreur
 		if (opt) {
 			errno = opt;
 			return -1;
@@ -98,42 +100,67 @@ int connect_wait (int sockno, struct sockaddr * addr, size_t addrlen, struct tim
 
 void isOnline(Host *h, float *pingTime) {
 
-    char hostname[256];
-    getHostname(h, hostname);
-
-    if(!checkIp(hostname)) {
-        printf("HostnameError : IP Address %s is not valid. Couldn't verify host's availability.", hostname);
-        setState(h, OFFLINE);
-        return;
-    } else if (getPort(h) > 65535 || getPort(h) < 1) {
-        printf("PortNumberError : Port %d is not valid. Couldn't verify host's availability.", getPort(h));
-        setState(h, OFFLINE);
-        return;
-    }
-
-    int sock = socket(AF_INET, SOCK_STREAM, 0);
-
-    struct sockaddr_in hint;
-
-    hint.sin_family = AF_INET;
-    hint.sin_port = htons(getPort(h));
-
-    inet_pton(AF_INET, hostname, &hint.sin_addr);
-
-    struct timeval tv;
-    tv.tv_sec = 2; // Mettre un timeout de 2 secondes
-    tv.tv_usec = 0;
-
-
-    //int isConnected = connect(sock, (struct sockaddr*)&hint, sizeof(hint));
-
+	int sock;
+	int isConnected;
+	
+	char hostname[256];
+	char port[6]; // Un port contient 6 charactères max avec le \0
 	clock_t start, end;
-	start = clock();
-    
-	int isConnected = connect_wait (sock, (struct sockaddr *)&hint, sizeof(hint), &tv); // Fonction utilisant un timeout
 
-	end = clock();
-	*pingTime = ( ((double) (end - start)) / CLOCKS_PER_SEC) * 100000; // Convertir en millisecondes
+	struct timeval tv;
+	struct addrinfo hint; // Sert à déterminer si c'est IPV4 ou IPV6 qui va être utilisé
+
+	getHostname(h, hostname);
+	snprintf(port, 6, "%d", getPort(h));
+	getaddrinfo(hostname, port, &hint, &hint);
+
+	printf("%d", hint.ai_family);
+	if(hint.ai_family != 10) {
+		//struct sockaddr_in6 hint;
+
+		struct sockaddr_in6 hint6;
+
+		sock = socket(AF_INET6, SOCK_STREAM, 0);
+		hint6.sin6_family = AF_INET6;
+
+		//inet_pton(PF_INET6, hostname, &hint.sin_addr);
+		inet_pton(AF_INET6, hostname, &hint6.sin6_addr);
+
+		hint6.sin6_port = htons(getPort(h));
+	
+		tv.tv_sec = 2; // Mettre un timeout de 2 secondes
+		tv.tv_usec = 0;
+
+		start = clock();
+		
+		isConnected = connect_wait (sock, (struct sockaddr *)&hint6, sizeof(hint6), &tv); // Fonction utilisant un timeout
+
+		//int isConnected = connect(sock, (struct sockaddr*)&hint, sizeof(hint));
+		end = clock();
+
+		*pingTime = ( ((double) (end - start)) / CLOCKS_PER_SEC) * 100000; // Convertir en millisecondes
+
+	} else  {
+		
+		struct sockaddr_in hint4;
+
+		sock = socket(AF_INET, SOCK_STREAM, 0);
+		hint4.sin_family = AF_INET;
+		inet_pton(AF_INET, hostname, &hint4.sin_addr);
+
+		hint4.sin_port = htons(getPort(h));
+		
+		tv.tv_sec = 2; // Mettre un timeout de 2 secondes
+		tv.tv_usec = 0;
+
+		start = clock();
+		
+		isConnected = connect_wait (sock, (struct sockaddr *)&hint4, sizeof(hint4), &tv); // Fonction utilisant un timeout
+		//int isConnected = connect(sock, (struct sockaddr*)&hint, sizeof(hint));
+		end = clock();
+
+		*pingTime = ( ((double) (end - start)) / CLOCKS_PER_SEC) * 100000; // Convertir en millisecondes
+	}
 
     close(sock);
 
@@ -145,7 +172,7 @@ void isOnline(Host *h, float *pingTime) {
 
 bool checkIp(const char* ip)
 {
-    struct sockaddr_in sa;
-    int result = inet_pton(AF_INET, ip, &(sa.sin_addr));
+	struct sockaddr_in sa;
+    int result = inet_pton(AF_INET, ip, &(sa.sin_addr)) || inet_pton(AF_INET6, ip, &(sa.sin_addr)); // On check si l'IP est valide en V4 ou en V6
     return result != 0;
 }

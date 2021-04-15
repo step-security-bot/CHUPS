@@ -12,5 +12,6 @@ Date : 15/03/2021
 #define MAX_ICMP_LEN 76
 
 int checksum(unsigned short *packet, int size);
+void sendPing(char *host);
 
 #endif
