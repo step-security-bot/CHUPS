@@ -26,6 +26,11 @@
 },
 {
   "directory": "/Users/arthur/Desktop/CHUPS/build",
+  "command": "/usr/bin/clang   -g -O0 -Wall --std=c11 -g -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu11 -o CMakeFiles/CHUPS.dir/src/icmp.c.o -c /Users/arthur/Desktop/CHUPS/src/icmp.c",
+  "file": "/Users/arthur/Desktop/CHUPS/src/icmp.c"
+},
+{
+  "directory": "/Users/arthur/Desktop/CHUPS/build",
   "command": "/usr/bin/clang   -g -O0 -Wall --std=c11 -g -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu11 -o CMakeFiles/CHUPS.dir/src/menu.c.o -c /Users/arthur/Desktop/CHUPS/src/menu.c",
   "file": "/Users/arthur/Desktop/CHUPS/src/menu.c"
 },

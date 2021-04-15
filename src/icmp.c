@@ -1,3 +1,9 @@
+/*
+Authors : Tchadel Icard && Arthur Pons
+Name : CHUPS.icmpC
+Date : 01/04/2021
+*/
+
 // Include de base
 #include <stdio.h>
 #include <stdlib.h>

@@ -36,13 +36,13 @@ void banner(void) {
     printf("\t\t\t");
 
     textcolor(RESET, RED, BLACK);
-    printf("WELCOME TO CHUPS ! ver 0.1\n");
+    printf("WELCOME TO CHUPS ! ver 0.2\n");
     textcolor(RESET, WHITE, BLACK);
 
     printf("\t\t");
 
     textcolor(BLINK, RED, BLACK);
-    printf("%sCréé par un noir un blanc et un suisse (enfin pas encore...).%s\n", BLINKING, NORMAL);
+    printf("%sCréé par un noir un blanc (c'est pour les quotas).%s\n", BLINKING, NORMAL);
     textcolor(RESET, WHITE, BLACK);
 }
 

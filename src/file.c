@@ -25,8 +25,10 @@ void writeToFile(const char *filename, const char *content) {
 
 void readFile(const char*filename, char linesBuf[128][391], int *hostNumber) {
     FILE *f = fopen(filename, "rb");
-    int i = 0;
-    while (fgets(linesBuf[i++], 391, f));
-    *hostNumber = i;
-    fclose(f);
+    if(f != NULL) {
+        int i = 0;
+        while (fgets(linesBuf[i++], 391, f));
+        *hostNumber = i;
+        fclose(f);
+    }
 }

@@ -223,6 +223,33 @@ src/host.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CHUPS.dir/build.make CMakeFiles/CHUPS.dir/src/host.c.s
 .PHONY : src/host.c.s
 
+src/icmp.o: src/icmp.c.o
+
+.PHONY : src/icmp.o
+
+# target to build an object file
+src/icmp.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CHUPS.dir/build.make CMakeFiles/CHUPS.dir/src/icmp.c.o
+.PHONY : src/icmp.c.o
+
+src/icmp.i: src/icmp.c.i
+
+.PHONY : src/icmp.i
+
+# target to preprocess a source file
+src/icmp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CHUPS.dir/build.make CMakeFiles/CHUPS.dir/src/icmp.c.i
+.PHONY : src/icmp.c.i
+
+src/icmp.s: src/icmp.c.s
+
+.PHONY : src/icmp.s
+
+# target to generate assembly for a file
+src/icmp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CHUPS.dir/build.make CMakeFiles/CHUPS.dir/src/icmp.c.s
+.PHONY : src/icmp.c.s
+
 src/logs.o: src/logs.c.o
 
 .PHONY : src/logs.o
@@ -376,6 +403,9 @@ help:
 	@echo "... src/host.o"
 	@echo "... src/host.i"
 	@echo "... src/host.s"
+	@echo "... src/icmp.o"
+	@echo "... src/icmp.i"
+	@echo "... src/icmp.s"
 	@echo "... src/logs.o"
 	@echo "... src/logs.i"
 	@echo "... src/logs.s"

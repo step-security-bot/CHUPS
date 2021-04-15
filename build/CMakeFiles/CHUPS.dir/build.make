@@ -141,9 +141,22 @@ CMakeFiles/CHUPS.dir/src/synack.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CHUPS.dir/src/synack.c.s"
 	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/arthur/Desktop/CHUPS/src/synack.c -o CMakeFiles/CHUPS.dir/src/synack.c.s
 
+CMakeFiles/CHUPS.dir/src/icmp.c.o: CMakeFiles/CHUPS.dir/flags.make
+CMakeFiles/CHUPS.dir/src/icmp.c.o: ../src/icmp.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthur/Desktop/CHUPS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/CHUPS.dir/src/icmp.c.o"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CHUPS.dir/src/icmp.c.o -c /Users/arthur/Desktop/CHUPS/src/icmp.c
+
+CMakeFiles/CHUPS.dir/src/icmp.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CHUPS.dir/src/icmp.c.i"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/arthur/Desktop/CHUPS/src/icmp.c > CMakeFiles/CHUPS.dir/src/icmp.c.i
+
+CMakeFiles/CHUPS.dir/src/icmp.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CHUPS.dir/src/icmp.c.s"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/arthur/Desktop/CHUPS/src/icmp.c -o CMakeFiles/CHUPS.dir/src/icmp.c.s
+
 CMakeFiles/CHUPS.dir/src/menu.c.o: CMakeFiles/CHUPS.dir/flags.make
 CMakeFiles/CHUPS.dir/src/menu.c.o: ../src/menu.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthur/Desktop/CHUPS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/CHUPS.dir/src/menu.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthur/Desktop/CHUPS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/CHUPS.dir/src/menu.c.o"
 	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CHUPS.dir/src/menu.c.o -c /Users/arthur/Desktop/CHUPS/src/menu.c
 
 CMakeFiles/CHUPS.dir/src/menu.c.i: cmake_force
@@ -156,7 +169,7 @@ CMakeFiles/CHUPS.dir/src/menu.c.s: cmake_force
 
 CMakeFiles/CHUPS.dir/src/file.c.o: CMakeFiles/CHUPS.dir/flags.make
 CMakeFiles/CHUPS.dir/src/file.c.o: ../src/file.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthur/Desktop/CHUPS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/CHUPS.dir/src/file.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthur/Desktop/CHUPS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/CHUPS.dir/src/file.c.o"
 	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CHUPS.dir/src/file.c.o -c /Users/arthur/Desktop/CHUPS/src/file.c
 
 CMakeFiles/CHUPS.dir/src/file.c.i: cmake_force
@@ -169,7 +182,7 @@ CMakeFiles/CHUPS.dir/src/file.c.s: cmake_force
 
 CMakeFiles/CHUPS.dir/src/logs.c.o: CMakeFiles/CHUPS.dir/flags.make
 CMakeFiles/CHUPS.dir/src/logs.c.o: ../src/logs.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthur/Desktop/CHUPS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/CHUPS.dir/src/logs.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthur/Desktop/CHUPS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/CHUPS.dir/src/logs.c.o"
 	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CHUPS.dir/src/logs.c.o -c /Users/arthur/Desktop/CHUPS/src/logs.c
 
 CMakeFiles/CHUPS.dir/src/logs.c.i: cmake_force
@@ -187,6 +200,7 @@ CHUPS_OBJECTS = \
 "CMakeFiles/CHUPS.dir/src/common.c.o" \
 "CMakeFiles/CHUPS.dir/src/host.c.o" \
 "CMakeFiles/CHUPS.dir/src/synack.c.o" \
+"CMakeFiles/CHUPS.dir/src/icmp.c.o" \
 "CMakeFiles/CHUPS.dir/src/menu.c.o" \
 "CMakeFiles/CHUPS.dir/src/file.c.o" \
 "CMakeFiles/CHUPS.dir/src/logs.c.o"
@@ -199,12 +213,13 @@ bin/CHUPS: CMakeFiles/CHUPS.dir/src/textcolor.c.o
 bin/CHUPS: CMakeFiles/CHUPS.dir/src/common.c.o
 bin/CHUPS: CMakeFiles/CHUPS.dir/src/host.c.o
 bin/CHUPS: CMakeFiles/CHUPS.dir/src/synack.c.o
+bin/CHUPS: CMakeFiles/CHUPS.dir/src/icmp.c.o
 bin/CHUPS: CMakeFiles/CHUPS.dir/src/menu.c.o
 bin/CHUPS: CMakeFiles/CHUPS.dir/src/file.c.o
 bin/CHUPS: CMakeFiles/CHUPS.dir/src/logs.c.o
 bin/CHUPS: CMakeFiles/CHUPS.dir/build.make
 bin/CHUPS: CMakeFiles/CHUPS.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/arthur/Desktop/CHUPS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C executable bin/CHUPS"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/arthur/Desktop/CHUPS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C executable bin/CHUPS"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CHUPS.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -11,9 +11,9 @@ Deux techniques pour vérifier ceci seront exploitées :
 1. Un scan utilisant le protocole PCT (Protocole de Contrôle de Transmissions*) qui essayera de se connecter à un hôte sur un port spécifié
 2. Un ping (paquet ICMP) envoyé à l'hôte et le programme se chargera d'analyser la réponse afin de déterminer si l'hôte est disponible sur le réseau.
 
-Seuls les IPV4 sont supportées.
+Les adresses IPV4 & IPV6 sont supportées.
 
-Chaque type de scan sera codé dans un fichier portant le nom du scan.
+Chaque type de scan (ICMP / SYNACK) sera codé dans un fichier portant le nom du scan.
 
 ## Comment l'utiliser ?
 
@@ -38,7 +38,7 @@ Ce mode est conçu pour fonctionner avec l'interface web qui relève les donnée
 Pour ce faire, démarrez l'interface web avec les commandes suivantes :
 
 ```bash
-sudo apt install node npm
+sudo apt install node npm # Seulement si vous n'avez pas encore ces paquets 
 cd web
 npm install
 npm run-script run
@@ -66,3 +66,4 @@ Le projet utilise les sockets UNIX donc est uniquement compatible avec Mac OS X 
 ### Version 0.2
 - Support d'IPV6
 - Scans ICMP
+- Amélioration de la stabilité globale du programme
