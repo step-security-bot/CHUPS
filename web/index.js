@@ -3,7 +3,7 @@ let app = express();
 let bodyParser = require('body-parser');
 let fs = require('fs');
 
-const port = process.env.PORT || 80
+const port = process.env.PORT || 8080
 
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs');

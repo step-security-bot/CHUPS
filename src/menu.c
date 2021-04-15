@@ -108,9 +108,6 @@ void lookAtHosts() {
 }
 
 void watchHosts() {
-    char lines[128][391]; // Pour stocker le fichier chups.dat
-    char tmpHostname[256], tmpName[128];
-
     Host host;
     enum scanType tmpSType;
 
@@ -118,6 +115,8 @@ void watchHosts() {
     float pingTime;
 
     while(true) {
+        char lines[128][391]; // Pour stocker le fichier chups.dat
+        char tmpHostname[256], tmpName[128];
         
         readFile("chups.dat",lines, &hostNumber);
 
