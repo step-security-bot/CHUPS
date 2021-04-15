@@ -140,7 +140,10 @@ void watchHosts() {
             sscanf(token, "%d", &tmpPort);
 
             initHost(&host, tmpName, tmpSType, tmpHostname, tmpPort);
-            isOnline(&host, &pingTime);
+            if (getScanType(&host) == SYNACK)
+                isOnline(&host, &pingTime);
+            else
+                sendPing(&host, &pingTime);
             makeLog(&host, pingTime);
 
             if(host.state == ONLINE) onlineHostsNumber++;
