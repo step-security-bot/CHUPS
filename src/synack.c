@@ -102,6 +102,7 @@ void isOnline(Host *h, float *pingTime) {
 
 	int sock;
 	int isConnected;
+	int ipv6Detect = 0;
 	
 	char hostname[256];
 	char port[6]; // Un port contient 6 charactères max avec le \0
@@ -111,11 +112,17 @@ void isOnline(Host *h, float *pingTime) {
 	struct addrinfo hint; // Sert à déterminer si c'est IPV4 ou IPV6 qui va être utilisé
 
 	getHostname(h, hostname);
-	snprintf(port, 6, "%d", getPort(h));
-	getaddrinfo(hostname, port, &hint, &hint);
+	/*	snprintf(port, 6, "%d", getPort(h));
+	getaddrinfo(hostname, port, &hint, &hint); // PRODUIT BCP DE BUGS */
 
-	printf("%d", hint.ai_family);
-	if(hint.ai_family != 10) {
+	for(int i = 0; i < strlen(hostname); i++){
+		if(hostname[i] == ':') {
+			ipv6Detect++;
+			break;
+		}
+	}
+
+	if(ipv6Detect == 1) {
 		//struct sockaddr_in6 hint;
 
 		struct sockaddr_in6 hint6;
@@ -140,7 +147,7 @@ void isOnline(Host *h, float *pingTime) {
 
 		*pingTime = ( ((double) (end - start)) / CLOCKS_PER_SEC) * 100000; // Convertir en millisecondes
 
-	} else  {
+	} else {
 		
 		struct sockaddr_in hint4;
 

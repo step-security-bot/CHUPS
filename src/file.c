@@ -27,6 +27,6 @@ void readFile(const char*filename, char linesBuf[128][391], int *hostNumber) {
     FILE *f = fopen(filename, "rb");
     int i = 0;
     while (fgets(linesBuf[i++], 391, f));
-    *hostNumber = i;s
+    *hostNumber = i;
     fclose(f);
 }
