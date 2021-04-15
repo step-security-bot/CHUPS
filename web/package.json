@@ -8,7 +8,7 @@
     "test": "nodemon index.js",
     "css-build": "node-sass --omit-source-map-url sass/style.scss public/bulma.css",
     "css-watch": "npm run css-build -- --watch",
-    "start": "npm run css-watch"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
