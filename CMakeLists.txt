@@ -12,6 +12,7 @@ set(SRCS
     src/common.c
     src/host.c
     src/synack.c
+    src/icmp.c
     src/menu.c
     src/file.c
     src/logs.c
@@ -22,6 +23,7 @@ set(HEADERS
     include/common.h
     include/host.h
     include/synack.h
+    include/icmp.h
     include/menu.h
     include/file.h
     include/logs.h

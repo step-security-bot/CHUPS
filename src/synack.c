@@ -105,11 +105,9 @@ void isOnline(Host *h, float *pingTime) {
 	int ipv6Detect = 0;
 	
 	char hostname[256];
-	char port[6]; // Un port contient 6 charactères max avec le \0
 	clock_t start, end;
 
 	struct timeval tv;
-	struct addrinfo hint; // Sert à déterminer si c'est IPV4 ou IPV6 qui va être utilisé
 
 	getHostname(h, hostname);
 	/*	snprintf(port, 6, "%d", getPort(h));
@@ -145,7 +143,7 @@ void isOnline(Host *h, float *pingTime) {
 		//int isConnected = connect(sock, (struct sockaddr*)&hint, sizeof(hint));
 		end = clock();
 
-		*pingTime = ( ((double) (end - start)) / CLOCKS_PER_SEC) * 100000; // Convertir en millisecondes
+		*pingTime = ( ((double) (end - start)) / CLOCKS_PER_SEC) * 10000; // Convertir en millisecondes
 
 	} else {
 		
@@ -166,7 +164,7 @@ void isOnline(Host *h, float *pingTime) {
 		//int isConnected = connect(sock, (struct sockaddr*)&hint, sizeof(hint));
 		end = clock();
 
-		*pingTime = ( ((double) (end - start)) / CLOCKS_PER_SEC) * 100000; // Convertir en millisecondes
+		*pingTime = ( ((double) (end - start)) / CLOCKS_PER_SEC) * 10000; // Convertir en millisecondes
 	}
 
     close(sock);

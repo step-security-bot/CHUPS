@@ -11,6 +11,7 @@
 // Include pour les sockets UNIX
 #include <sys/types.h>
 #include <sys/socket.h>
+#include <fcntl.h>
 
 // Include pour les structures additionnelles
 #include <arpa/inet.h>
@@ -25,6 +26,7 @@
 
 // Include des libs custom
 #include   "../include/icmp.h"
+#include   "../include/host.h"
 
 int checksum(unsigned short *payload, int size) {
     int sum = 0;
@@ -48,14 +50,18 @@ int checksum(unsigned short *payload, int size) {
     return result;
 }
 
-void sendPing(char *host) {
+void sendPing(Host *host, float *pingTime) {
     struct addrinfo hints, *result;
+    clock_t start, end, timeout;
+    char hostname[256];
+
+    getHostname(host, hostname);
 
     memset(&hints, 0, sizeof(struct addrinfo));
     hints.ai_family = AF_INET;
     hints.ai_socktype = SOCK_RAW;
 
-    if ((getaddrinfo(host, 0, &hints, &result)) < 0) {
+    if ((getaddrinfo(hostname, 0, &hints, &result)) < 0) {
         printf("L'adresse IP entrée est invalide");
         return;
     }
@@ -74,6 +80,8 @@ void sendPing(char *host) {
             return;
         }
 
+        fcntl(sock, F_SETFL, O_NONBLOCK);
+
         payload = (struct icmp6_hdr *) packet;
         memset(payload, 0, sizeof(packet));
         payload->icmp6_type = ICMP6_ECHO_REQUEST;
@@ -81,23 +89,32 @@ void sendPing(char *host) {
 
         ioLen = sendto(sock, packet, sizeof(packet), 0, result->ai_addr, sizeof(struct sockaddr_in6));
 
-        while (1) {
+        start = clock();
+
+        do {
             struct sockaddr_in6 source;
             socklen_t sourceLen = sizeof(source);
+            end = clock();
+            timeout = (double)(end - start) / CLOCKS_PER_SEC;
 
             ioLen = recvfrom(sock, packet, sizeof(packet), 0, (struct sockaddr *) &source, &sourceLen);
 
             if (ioLen < 0) {
-                printf("L'hôte n'a pas répondu");
                 continue;
             }
 
             if (ioLen >= 76) {
                 payload = (struct icmp6_hdr *) packet;
-                if (payload->icmp6_type == ICMP6_ECHO_REPLY)
-                    break;
+                if (payload->icmp6_type == ICMP6_ECHO_REPLY) {
+                    *pingTime = ( ((double) (end - start)) / CLOCKS_PER_SEC) * 1000;
+                    setState(host, ONLINE);
+                    return;
+                }
             }
-        }
+        } while (timeout < 1);
+
+        setState(host, OFFLINE);
+        return;
     } else {
         int sock, ioLen;
         // Le nombre de protocol 1 corresponds au protocol ICMP
@@ -112,6 +129,8 @@ void sendPing(char *host) {
             return;
         }
 
+        fcntl(sock, F_SETFL, O_NONBLOCK);
+
         payload = (struct icmp *) packet;
         memset(payload, 0, sizeof(packet));
         payload->icmp_type = ICMP_ECHO;
@@ -124,23 +143,32 @@ void sendPing(char *host) {
             return;
         }
 
-        while (1) {
+        start = clock();
+
+        do {
             struct sockaddr_in source;
             socklen_t sourceLen = sizeof(source);
+            end = clock();
+            timeout = (double)(end - start) / CLOCKS_PER_SEC;
 
             ioLen = recvfrom(sock, packet, sizeof(packet), 0, (struct sockaddr *) &source, &sourceLen);
 
             if (ioLen < 0) {
-                printf("L'hôte n'a pas répondu");
                 continue;
             }
 
             if (ioLen >= 76) {
                 struct iphdr *iphdr = (struct iphdr *) packet;
                 payload = (struct icmp *) (packet + (iphdr->ihl << 2));
-                if (payload->icmp_type == ICMP_ECHOREPLY)
-                    break;
+                if (payload->icmp_type == ICMP_ECHOREPLY) {
+                    *pingTime = ( ((double) (end - start)) / CLOCKS_PER_SEC) * 1000;
+                    setState(host, ONLINE);
+                    return;
+                }
             }
-        }
+        } while (timeout < 1);
+
+        setState(host, OFFLINE);
+        return;
     }
 }

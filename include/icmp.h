@@ -11,7 +11,9 @@ Date : 15/03/2021
 #define MAX_IP_LEN 60
 #define MAX_ICMP_LEN 76
 
+#include "host.h"
+
 int checksum(unsigned short *packet, int size);
-void sendPing(char *host);
+void sendPing(Host *host, float *pingTime);
 
 #endif

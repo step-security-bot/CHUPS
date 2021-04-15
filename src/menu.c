@@ -16,6 +16,7 @@ Date : 01/03/2021
 #include "../include/menu.h"
 #include "../include/file.h"
 #include "../include/logs.h"
+#include "../include/icmp.h"
 
 void menu(void) {
 
@@ -85,7 +86,10 @@ void lookAtHosts() {
 
         float pingTime;
 
-        isOnline(&host, &pingTime);
+        if (getScanType(&host) == SYNACK)
+            isOnline(&host, &pingTime);
+        else
+            sendPing(&host, &pingTime);
 
         if (host.state == ONLINE) {
             printf("%32s %5d  :  ", host.name, host.port);
