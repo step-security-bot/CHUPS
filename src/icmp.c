@@ -58,7 +58,7 @@ void sendPing(Host *host, float *pingTime) {
     getHostname(host, hostname);
 
     memset(&hints, 0, sizeof(struct addrinfo));
-    hints.ai_family = AF_INET;
+    hints.ai_family = PF_UNSPEC;
     hints.ai_socktype = SOCK_RAW;
 
     if ((getaddrinfo(hostname, 0, &hints, &result)) < 0) {
