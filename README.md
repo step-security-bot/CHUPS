@@ -60,12 +60,12 @@ Le projet utilise les sockets UNIX donc est uniquement compatible avec Mac OS X 
 
 ## Logs de changements
 
-### Version 0.1
-- Support d'IPV4
-- Scans TCP
-- Interface web
-
 ### Version 0.2
 - Support d'IPV6
 - Scans ICMP
 - Amélioration de la stabilité globale du programme
+
+### Version 0.1
+- Support d'IPV4
+- Scans TCP
+- Interface web
