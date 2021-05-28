@@ -15,7 +15,7 @@ Les adresses IPV4 & IPV6 sont supportées.
 
 Chaque type de scan (ICMP / SYNACK) sera codé dans un fichier portant le nom du scan.
 
-* Traduction officielle de l'ANSSI
+ \* Traduction officielle de l'ANSSI
 
 ## Comment l'utiliser ?
 
