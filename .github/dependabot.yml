@@ -1,0 +1,1856 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/@fortawesome/fontawesome-common-types
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/@fortawesome/fontawesome-free-solid
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/@fortawesome/fontawesome
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/@sindresorhus/is
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/@szmarczak/http-timer
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/abbrev
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/accepts
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/ajv
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/amdefine
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/ansi-align/node_modules/string-width
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/ansi-align
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/ansi-regex
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/ansi-styles
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/anymatch
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/aproba
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/are-we-there-yet
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/array-find-index
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/array-flatten
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/asn1
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/assert-plus
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/async-foreach
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/async
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/asynckit
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/aws-sign2
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/aws4
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/balanced-match
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/bcrypt-pbkdf
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/binary-extensions
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/body-parser
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/boxen/node_modules/ansi-styles
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/boxen/node_modules/chalk
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/boxen/node_modules/color-convert
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/boxen/node_modules/color-name
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/boxen/node_modules/has-flag
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/boxen/node_modules/supports-color
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/boxen
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/brace-expansion
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/braces
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/bulma
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/bytes
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/cacheable-request/node_modules/get-stream
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/cacheable-request/node_modules/lowercase-keys
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/cacheable-request
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/camelcase-keys/node_modules/camelcase
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/camelcase-keys
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/camelcase
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/caseless
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/chalk
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/chokidar
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/chownr
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/ci-info
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/cli-boxes
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/cliui/node_modules/string-width
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/cliui
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/clone-response
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/code-point-at
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/color-convert
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/color-name
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/combined-stream
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/concat-map
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/configstore
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/console-control-strings
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/content-disposition
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/content-type
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/cookie-signature
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/cookie
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/core-util-is
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/cross-spawn
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/crypto-random-string
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/currently-unhandled
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/dashdash
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/debug
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/decamelize
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/decompress-response
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/deep-extend
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/defer-to-connect
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/delayed-stream
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/delegates
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/depd
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/destroy
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/dot-prop
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/duplexer3
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/ecc-jsbn
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/ee-first
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/ejs
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/emoji-regex
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/encodeurl
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/end-of-stream
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/env-paths
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/error-ex
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/escape-goat
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/escape-html
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/escape-string-regexp
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/etag
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/express
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/extend
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/extsprintf
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/fast-deep-equal
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/fast-json-stable-stringify
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/filelist
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/fill-range
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/finalhandler
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/find-up
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/forever-agent
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/form-data
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/forwarded
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/fresh
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/fs-minipass
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/fs.realpath
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/fsevents
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/function-bind
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/gauge/node_modules/ansi-regex
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/gauge/node_modules/is-fullwidth-code-point
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/gauge/node_modules/string-width
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/gauge/node_modules/strip-ansi
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/gauge
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/gaze
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/get-caller-file
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/get-stdin
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/get-stream
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/getpass
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/glob-parent
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/glob
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/global-dirs
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/globule
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/got
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/graceful-fs
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/har-schema
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/har-validator
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/has-ansi/node_modules/ansi-regex
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/has-ansi
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/has-flag
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/has-unicode
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/has-yarn
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/has
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/hosted-git-info
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/http-cache-semantics
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/http-errors
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/http-signature
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/iconv-lite
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/ignore-by-default
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/import-lazy
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/imurmurhash
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/indent-string
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/inflight
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/inherits
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/ini
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/ipaddr.js
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/is-arrayish
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/is-binary-path
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/is-ci
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/is-core-module
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/is-extglob
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/is-finite
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/is-fullwidth-code-point
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/is-glob
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/is-installed-globally
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/is-npm
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/is-number
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/is-obj
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/is-path-inside
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/is-typedarray
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/is-utf8
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/is-yarn-global
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/isarray
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/isexe
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/isstream
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/jake
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/js-base64
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/jsbn
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/json-buffer
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/json-schema-traverse
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/json-schema
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/json-stringify-safe
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/jsprim
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/keyv
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/latest-version
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/load-json-file
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/locate-path/node_modules/path-exists
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/locate-path
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/lodash
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/loud-rejection
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/lowercase-keys
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/lru-cache
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/make-dir/node_modules/semver
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/make-dir
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/map-obj
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/media-typer
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/meow
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/merge-descriptors
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/methods
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/mime-db
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/mime-types
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/mime
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/mimic-response
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/minimatch
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/minimist
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/minipass
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/minizlib
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/mkdirp
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/ms
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/nan
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/nan/tools
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/negotiator
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/node-gyp/node_modules/nopt
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/node-gyp/node_modules/semver
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/node-gyp
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/node-sass/node_modules/ansi-regex
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/node-sass/node_modules/ansi-styles
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/node-sass/node_modules/chalk
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/node-sass/node_modules/strip-ansi
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/node-sass/node_modules/supports-color
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/node-sass
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/nodemon/node_modules/debug
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/nodemon/node_modules/ms
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/nodemon
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/nopt
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/normalize-package-data
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/normalize-path
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/normalize-url
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/npmlog
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/number-is-nan
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/oauth-sign
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/object-assign
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/on-finished
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/once
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/p-cancelable
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/p-limit
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/p-locate
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/p-try
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/package-json/node_modules/semver
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/package-json
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/parse-json
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/parseurl
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/path-exists
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/path-is-absolute
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/path-key
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/path-parse
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/path-to-regexp
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/path-type
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/performance-now
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/picomatch
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/pify
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/pinkie-promise
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/pinkie
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/prepend-http
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/process-nextick-args
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/proxy-addr
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/psl
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/pstree.remy
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/pump
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/punycode
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/pupa
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/qs
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/range-parser
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/raw-body
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/rc
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/read-pkg-up
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/read-pkg
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/readable-stream
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/readdirp
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/redent
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/registry-auth-token
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/registry-url
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/repeating
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/request/node_modules/qs
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/request
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/require-directory
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/require-main-filename
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/resolve
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/resolve/test/module_dir/zmodules/bbb
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/resolve/test/resolver/baz
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/resolve/test/resolver/browser_field
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/resolve/test/resolver/dot_main
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/resolve/test/resolver/dot_slash_main
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/resolve/test/resolver/incorrect_main
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/resolve/test/resolver/invalid_main
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/resolve/test/resolver/multirepo
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/resolve/test/resolver/multirepo/packages/package-a
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/resolve/test/resolver/multirepo/packages/package-b
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/resolve/test/resolver/nested_symlinks/mylib
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/resolve/test/resolver/symlinked/package
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/responselike
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/rimraf
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/safe-buffer
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/safer-buffer
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/sass-graph
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/scss-tokenizer
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/semver-diff/node_modules/semver
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/semver-diff
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/semver
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/send/node_modules/ms
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/send
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/serve-static
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/set-blocking
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/setprototypeof
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/shebang-command
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/shebang-regex
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/signal-exit
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/source-map
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/spdx-correct
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/spdx-exceptions
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/spdx-expression-parse
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/spdx-license-ids
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/sshpk
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/statuses
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/stdout-stream
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/string-width/node_modules/ansi-regex
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/string-width/node_modules/emoji-regex
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/string-width/node_modules/is-fullwidth-code-point
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/string-width/node_modules/strip-ansi
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/string-width
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/string_decoder
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/strip-ansi
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/strip-bom
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/strip-indent
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/strip-json-comments
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/supports-color
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/tar/node_modules/mkdirp
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/tar
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/term-size
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/to-readable-stream
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/to-regex-range
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/toidentifier
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/touch
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/tough-cookie
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/trim-newlines
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/true-case-path
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/tunnel-agent
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/tweetnacl
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/type-fest
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/type-is
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/typedarray-to-buffer
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/undefsafe
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/unique-string
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/unpipe
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/update-notifier/node_modules/ansi-styles
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/update-notifier/node_modules/chalk
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/update-notifier/node_modules/color-convert
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/update-notifier/node_modules/color-name
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/update-notifier/node_modules/has-flag
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/update-notifier/node_modules/supports-color
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/update-notifier
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/uri-js
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/url-parse-lax
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/util-deprecate
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/utils-merge
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/uuid
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/validate-npm-package-license
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/vary
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/verror
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/which-module
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/which
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/wide-align/node_modules/ansi-regex
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/wide-align/node_modules/string-width
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/wide-align/node_modules/strip-ansi
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/wide-align
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/widest-line
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/wrap-ansi/node_modules/string-width
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/wrap-ansi
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/wrappy
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/write-file-atomic
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/xdg-basedir
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/y18n
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/yallist
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/yargs-parser
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/yargs/node_modules/find-up
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/yargs/node_modules/string-width
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web/node_modules/yargs
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: /web
+    schedule:
+      interval: daily
